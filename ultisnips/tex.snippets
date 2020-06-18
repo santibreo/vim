@@ -1,0 +1,80 @@
+# A valid snippet should starts with:
+#
+#		snippet trigger_word [ "description" [ options ] ]
+#
+# and end with:
+#
+#		endsnippet
+#
+# Snippet options:
+#
+#		b - Beginning of line.
+#		i - In-word expansion.
+#		w - Word boundary.
+#		r - Regular expression
+#		e - Custom context snippet
+#		A - Snippet will be triggered automatically, when condition matches.
+#
+# Basic example:
+#
+#		snippet emitter "emitter properties" b
+#		private readonly ${1} = new Emitter<$2>()
+#		public readonly ${1/^_(.*)/$1/}: Event<$2> = this.$1.event
+#		endsnippet
+#
+# Online reference:
+# 	https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt
+
+# Text edition
+snippet quote "Text quotation" w
+\`\`$1'' $0
+endsnippet
+
+# Basic math
+snippet mk "Inline math" wA
+\$${1}\$$0
+endsnippet
+
+snippet dm "Math block" wA
+\[
+$1
+.\] $0
+endsnippet
+
+snippet // "Fraction" iA
+\\frac{$1}{$2}$0
+endsnippet
+
+# Simpy blocks
+snippet sympy "Sympy block " w
+sympyin $1 sympyout$0
+endsnippet
+
+priority 2
+snippet "sympyin(.+)sympyout" "Evaluate sympy" wr
+`!p
+from sympy import *
+if match:
+	x, y, z, t = symbols('x y z t')
+	k, m, n = symbols('k m n', integer=True)
+	f, g, h = symbols('f g h', cls=Function)
+	sol = latex(eval(match.group(1).strip()))
+	snip.rv = sol.replace("{\\left(", "\\left(")\
+				 .replace("\\right)}", "\\right)")\
+				 .replace("\\,", "")
+else:
+	snip.rv = ""
+` $0
+endsnippet
+
+
+priority 3
+snippet "eval([0-9-+*/]+)" "Inline calc" wr
+`!p
+if match:
+	snip.rv = f"{eval(match.group(1)):.3f}"
+else:
+	snip.rv = ""
+` $0
+endsnippet
+	
