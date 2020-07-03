@@ -30,19 +30,21 @@ noremap Q :Sexplore<CR>
 "xnoremap J :move '>+1<CR>gv-gv 
 "xnoremap K :move '<-2<CR>gv-gv
 
-" Use alt + hjkl to resize windows
-nnoremap <leader>j    :resize -2<CR>
-nnoremap <leader>k    :resize +2<CR>
-nnoremap <leader>h    :vertical resize -2<CR>
-nnoremap <leader>l    :vertical resize +2<CR>
+" Use <S-Left> to resize windows
+nnoremap <S-Down> :resize -2<CR>
+nnoremap <S-Up> :resize +2<CR>
+nnoremap <S-Left> :vertical resize -2<CR>
+nnoremap <S-Right> :vertical resize +2<CR>
 
 " I hate escape more than anything else
 inoremap jk <Esc>
+inoremap jj <Esc>
 inoremap kj <Esc>
+inoremap kk <Esc>
 
 " Easy CAPS
-inoremap <C-u> <ESC>viwUi
-nnoremap <C-u> viwU<Esc>
+inoremap <C-U> <ESC>viw~i
+nnoremap <C-U> viw~<ESC>
 
 " Ctrl+TAB in general mode will move to text buffer
 nnoremap <C-TAB> :bnext<CR>
@@ -66,11 +68,12 @@ nnoremap <C-ñ> :sp<CR>:term R<CR>
 
 " Can get out of terminal mode
 tnoremap <Esc> <C-\><C-n>
+tnoremap <expr> <leader><C-R> '<C-\><C-N>"'.nr2char(getchar()).'pi'
 tmap <C-j> <Esc><C-j>
 tmap <C-k> <Esc><C-k>
 tmap <C-h> <Esc><C-h>
 tmap <C-l> <Esc><C-l>
 
 " Code execution
-inoremap <C-CR> <ESC>Vy<C-w>jpA<CR><C-\><C-n><C-w>k
-vnoremap <C-CR> <ESC>y<C-w>jpA<CR><C-\><C-n><C-w>k
+inoremap <C-CR> <ESC>^Y<C-w>jp:startinsert<CR><CR><C-\><C-N><C-w>ki
+vnoremap <C-CR> y<C-w>jpi<CR><CR><C-\><C-n><C-w>k

@@ -25,8 +25,17 @@
 # Online reference:
 # 	https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt
 
+# Document
+snippet document "document (or arbitrary) environment" bA
+\\begin{${1:document}}
+
+${0:${VISUAL}}
+
+\\end{$1}
+endsnippet
+
 # Text edition
-snippet quote "Text quotation" w
+snippet quote "Text quotation" wA
 \`\`$1'' $0
 endsnippet
 
@@ -38,11 +47,12 @@ endsnippet
 snippet dm "Math block" wA
 \[
 $1
-.\] $0
+.\] 
+$0
 endsnippet
 
 snippet // "Fraction" iA
-\\frac{$1}{$2}$0
+\\frac{$1}{$2} $0
 endsnippet
 
 # Simpy blocks
@@ -77,4 +87,8 @@ else:
 	snip.rv = ""
 ` $0
 endsnippet
-	
+
+snippet 1l "Write magic byte line" bA
+%!TeX program = ${1:xelatex}
+$0
+endsnippet

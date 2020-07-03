@@ -21,6 +21,8 @@ call plug#begin('~/AppData/Local/nvim/plugged')
     Plug 'lervag/vimtex'
     " Fuzzy file search
 "    Plug 'vifm/vifm.vim'
+    " Rip grep for faster searchs
+    Plug 'jremmen/vim-ripgrep'
 call plug#end()
 
 
@@ -39,13 +41,18 @@ let g:node_host_prog = expand("c:\\users\\n230104\\appdata\\roaming\\npm\\node_m
 let g:netrw_liststyle=3 " tree view type
 let g:netrw_banner=1 " 0 to don't show a useless banner
 
+
 " emmet
 let g:user_emmet_leader_key=',' " same as user
 
 " Coc
-source $USERPROFILE\AppData\Local\nvim\plugin\coc.vim
-source $USERPROFILE\AppData\Local\nvim\plugin\coc-vimtex.vim
-"source $USERPROFILE\AppData\Local\nvim\plugin\coc-snippets.vim
+source $USERPROFILE\AppData\Local\nvim\settings\coc.vim
+source $USERPROFILE\AppData\Local\nvim\settings\coc-vimtex.vim
+"source $USERPROFILE\AppData\Local\nvim\settings\coc-snippets.vim
 
 "Ultisnips
-source $USERPROFILE\AppData\Local\nvim\plugin\ultisnips.vim
+source $USERPROFILE\AppData\Local\nvim\settings\ultisnips.vim
+
+" Fugitive
+source $USERPROFILE\AppData\Local\nvim\settings\fugitive.vim
+

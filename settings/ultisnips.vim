@@ -1,7 +1,7 @@
 " Fly like a plane
-let g:UltiSnipsExpandTrigger = '<tab>'
-let g:UltiSnipsJumpForwardTrigger = '<c-j>'
-let g:UltiSnipsJumpBackwardTrigger = '<c-k>'
+let g:UltiSnipsExpandTrigger = '<c-space>'
+let g:UltiSnipsJumpForwardTrigger = '<C-j>'
+let g:UltiSnipsJumpBackwardTrigger = '<C-k>'
 " vertically split ultisnips edit window
 let g:UltiSnipsEditSplit="vertical"
 "Open UltiSnips edit function

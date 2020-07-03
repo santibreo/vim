@@ -26,13 +26,18 @@
     "list.maxHeight": 15,
     // python config
     "python.jediEnabled": true,
+    "python.jediPath": "C:/Program Files/Python/Lib/site-packages",
+    "python.formatting.provider": "black",
+    "python.formatting.blackPath": "C:/Program Files/python/Scripts/black",
     "python.linting.enabled": true,
-    "python.formatting.blackPath": "C:/program files/python/lib/site-packages",
+    "python.linting.flake8Enabled": true,
+    "python.linting.flake8Path": "C:/Program Files/python/Scripts/flake8",
     "python.venvFolders": [
         "_pyenvs",
         "../venv",
         ".pyenv",
-        ".direnv"
-    ]
+        ".virtualenvs"
+    ],
     // Code Snippets
+    "coc.source.ultisnips.enable": true
 }
