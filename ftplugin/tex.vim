@@ -1,3 +1,7 @@
+" File paths recognition
+setlocal isfname-={
+setlocal isfname-=}
+
 " Spell check
 setlocal spelllang=en
 setlocal spell
