@@ -11,6 +11,10 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+" Open files in a split
+nnoremap <leader>hf <C-W>f
+nnoremap <leader>vf <C-W>vgf
+
 " Folding with 
 "nnoremap <space> za 
 
