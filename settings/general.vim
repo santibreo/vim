@@ -12,6 +12,7 @@ syntax enable                       " Enable syntax highlighting
 filetype plugin indent on           " Enable filetype Plugin & Indent
 set hidden                          " Enable re-usable window (needed for Coc)
 set showtabline=2                   " Always show tabs
+set guitablabel=%t                  " Tab label is just the file name
 set updatetime=300                  " Faster completion
 set timeoutlen=500                  " By default timeoutlen is 1000 ms
 set confirm                         " Ask when leaving unsaved files
@@ -58,17 +59,17 @@ set colorcolumn=81                  " Highlight line limit
 " + STATUSLINE
 set statusline=
 set statusline+=%#PmenuSel#
-set statusline+=\ %{FugitiveStatusline()}
+set statusline+=%{FugitiveStatusline()}
 set statusline+=%#WildMenu#
-set statusline+=\ %M
+set statusline+=%M
 set statusline+=\ %y
 set statusline+=\ %r
 set statusline+=%#CursorColumn#
 set statusline+=\ %F
 set statusline+=%=                  " Right side settings
 set statusline+=%#DiffChange#
-set statusline+=\ %c:%l/%L
-set statusline+=\ %p%%
+set statusline+=\ %c:%l/%L\ 
+set statusline+=\ %p%%\ 
 set statusline+=\ [%n]
 au! BufWritePost $MYVIMRC source %  " auto source when writing to init.vim alternatively you can run :source $MYVIMRC
 
