@@ -55,10 +55,6 @@ nnoremap <C-TAB> :bnext<CR>
 " Ctrl+SHIFT+TAB will go back
 nnoremap <C-S-TAB> :bprevious<CR>
 
-" Alternate way to save
-nnoremap <C-s> :w<CR>
-" Alternate way to quit
-nnoremap <C-q> :wq!<CR>
 " Use control-c instead of escape
 nnoremap <C-c> <Esc>
 
@@ -77,7 +73,3 @@ tmap <C-j> <Esc><C-j>
 tmap <C-k> <Esc><C-k>
 tmap <C-h> <Esc><C-h>
 tmap <C-l> <Esc><C-l>
-
-" Code execution
-inoremap <C-CR> <ESC>^Y<C-w>jp:startinsert<CR><CR><C-\><C-N><C-w>ki
-vnoremap <C-CR> y<C-w>jpi<CR><CR><C-\><C-n><C-w>k

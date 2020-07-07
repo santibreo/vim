@@ -25,6 +25,24 @@
 # Online reference:
 # 	https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt
 
+# Article
+snippet article "Begin article" b
+\\documentclass{article}
+
+% AMS packages:
+\\usepackage[${1:english}]{babel}
+\\usepackage{geometry}
+\\usepackage{amsmath, amsthm, amsfonts}
+\\geometry{
+	a4paper,
+	total={160mm,247mm},
+	left=25mm,
+	top=20mm,
+	bottom=30mm
+}
+$0
+endsnippet
+
 # Document
 snippet document "document (or arbitrary) environment" bA
 \\begin{${1:document}}
@@ -60,7 +78,7 @@ snippet sympy "Sympy block " w
 sympyin $1 sympyout$0
 endsnippet
 
-priority 2
+# Sympy solve
 snippet "sympyin(.+)sympyout" "Evaluate sympy" wr
 `!p
 from sympy import *
@@ -77,7 +95,7 @@ else:
 ` $0
 endsnippet
 
-
+# Minimal inline math
 priority 3
 snippet "eval([0-9-+*/]+)" "Inline calc" wr
 `!p
@@ -88,8 +106,10 @@ else:
 ` $0
 endsnippet
 
+# Maguc byte
 snippet 1l "Write magic byte line" bA
 %!TeX program = ${1:xelatex}
 
 $0
 endsnippet
+

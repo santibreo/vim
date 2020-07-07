@@ -5,7 +5,7 @@ let mapleader = ","
 " + BASICS
 set spellfile=$NVIMHOME/dictionary/en.utf-8.add  " English words list
 set nocompatible                    " Avoid VI backward compatibility
-set encoding=UTF-8
+set encoding=utf-8
 set fileencoding=utf-8              " The encoding written to file
 set autoread
 syntax enable                       " Enable syntax highlighting 
@@ -89,17 +89,17 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 
 " Ensure files are read as what I want:
-let g:vimwiki_ext2syntax = {
-            \'.Rmd': 'markdown',
-            \'.rmd': 'markdown',
-            \'.md': 'markdown',
-            \'.markdown': 'markdown',
-            \'.mdown': 'markdown'
-            \}
+"let g:vimwiki_ext2syntax = {
+"            \'.Rmd': 'markdown',
+"            \'.rmd': 'markdown',
+"            \'.md': 'markdown',
+"            \'.markdown': 'markdown',
+"            \'.mdown': 'markdown'
+"            \}
 autocmd BufRead, BufNewFile *.tex set filetype=tex
 autocmd BufEnter *.tex set foldmethod=expr
 autocmd BufEnter *.tex set foldexpr=vimtex#fold#level(v:lnum)
 autocmd BufEnter *.tex set foldtext=vimtex#fold#text()
-"autocmd BufRead,BufNewFile *.ms,*.me,*.mom,*.man set filetype=groff
+autocmd BufRead,BufNewFile *.md,*.mdown,*.Rmd,*.rmd set filetype=markdown
 
 

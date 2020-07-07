@@ -14,7 +14,7 @@ call plug#begin('~/AppData/Local/nvim/plugged')
     Plug 'honza/vim-snippets'
     Plug 'SirVer/ultisnips'
     " For Python
-    Plug 'tell-k/vim-autopep8'
+    " Plug 'tell-k/vim-autopep8'
     " For HTML
     Plug 'mattn/emmet-vim'
     " For Latex

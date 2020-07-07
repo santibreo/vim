@@ -25,23 +25,39 @@
 # Online reference:
 # 	https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt
 
-snippet pdnp "import pandas and numpy" b
-import pandas as pd
-import numpy as np
-$0
-endsnippet
-
-snippet dumbdfnum "dumb pandas DataFrame" b
-aux = pd.DataFrame([[1,2,3],[4,5,6]], columns=["A", "B"])
-$0
-endsnippet
-
-snippet docbegin "Begin package documentation" b
-"""
+snippet codeb "Code block" bA
+\`\`\`
 $1
-
-@author: ${2:n230104}
-"""
-
+\`\`\`
 $0
+endsnippet
+
+snippet codel "Code block with language" bA
+\`\`\`\{${1:python}\}
+$2
+\`\`\`
+$0
+endsnippet
+
+snippet .ilc "Inline code" wA
+\`$1\`$0
+endsnippet	
+
+snippet .bf "Bold text" wA
+**$1**$0
+endsnippet
+
+snippet .ita "Italic text" wA
+_$1_$0
+endsnippet	
+
+priority 3
+snippet ".h([1-6]{1})" "Encabezado" brA
+`!p
+if match:
+	n = int(match.group(1))
+	snip.rv = "#"*n
+else:
+	snip.rv = ""
+` $0
 endsnippet

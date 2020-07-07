@@ -25,23 +25,16 @@
 # Online reference:
 # 	https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt
 
-snippet pdnp "import pandas and numpy" b
-import pandas as pd
-import numpy as np
+snippet "listfiles(.*)" "List the files into a given path" br
+`!p
+import os
+if match and os.path.isdir(match.group(1)):
+	snip.rv = "\n".join(os.listdir(match.group(1)))
+else:
+	snip.rv = "\n".join(os.listdir("."))
+`
 $0
 endsnippet
-
-snippet dumbdfnum "dumb pandas DataFrame" b
-aux = pd.DataFrame([[1,2,3],[4,5,6]], columns=["A", "B"])
-$0
-endsnippet
-
-snippet docbegin "Begin package documentation" b
-"""
-$1
-
-@author: ${2:n230104}
-"""
-
-$0
-endsnippet
+		
+		
+	
