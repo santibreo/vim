@@ -106,10 +106,15 @@ else:
 ` $0
 endsnippet
 
-# Maguc byte
+# Magic byte
 snippet 1l "Write magic byte line" bA
 %!TeX program = ${1:xelatex}
 
 $0
 endsnippet
 
+# ALM sty
+snippet almsty "Use ALM latex template" bA
+\usepackage[${1:FinalVersion}]{ALMTemplate}
+$0
+endsnippet

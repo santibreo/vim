@@ -47,16 +47,21 @@ inoremap kj <Esc>
 inoremap kk <Esc>
 
 " Easy CAPS
-inoremap <C-U> <ESC>viw~i
-nnoremap <C-U> viw~<ESC>
+inoremap <C-U> <ESC>viwUi
+nnoremap <C-U> viwU
+" Easy LOWER
+inoremap <c-l> <ESC>viwui
+nnoremap <c-l> viwu
+" Easy TOGGLE
+nnoremap ~~ ~lh
 
 " Ctrl+TAB in general mode will move to text buffer
-nnoremap <C-TAB> :bnext<CR>
+nnoremap <C-S-right> :bnext<CR>
 " Ctrl+SHIFT+TAB will go back
-nnoremap <C-S-TAB> :bprevious<CR>
+nnoremap <C-S-left> :bprevious<CR>
 
 " Use control-c instead of escape
-nnoremap <C-c> <Esc>
+inoremap <C-c> <Esc>
 
 " Better tabbing
 vnoremap < <gv

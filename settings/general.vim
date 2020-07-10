@@ -57,20 +57,59 @@ set noruler                         " Setting up rulers & spacing tabs
 set cursorline                      " Highlight current line
 set colorcolumn=81                  " Highlight line limit
 " + STATUSLINE
-set statusline=
-set statusline+=%#PmenuSel#
-set statusline+=%{FugitiveStatusline()}
-set statusline+=%#WildMenu#
-set statusline+=%M
-set statusline+=\ %y
-set statusline+=\ %r
-set statusline+=%#CursorColumn#
-set statusline+=\ %F
-set statusline+=%=                  " Right side settings
-set statusline+=%#DiffChange#
-set statusline+=\ %c:%l/%L\ 
-set statusline+=\ %p%%\ 
-set statusline+=\ [%n]
+" Function to get the current mode
+function! ModeStatusline()
+    let c_mode = mode()
+    if c_mode ==? "n"
+        let statusstring = '%#DiffDelete#'
+        let statusstring .= ' NORMAL '
+    elseif c_mode ==? "v"
+        let statusstring = '%#DiffText#'
+        let statusstring .= ' VISUAL '
+    elseif c_mode ==? "r"
+        let statusstring = '%#DiffAdd#'
+        let statusstring .= ' REPLACE '
+    elseif c_mode ==? "c"
+        let statusstring = '%#DiffChange#'
+        let statusstring .= ' COMMAND '
+    else
+        let statusstring = '%#DiffAdd#'
+        let statusstring .= ' INSERT '
+
+    endif
+    " Add static content
+    let statusstring.="%#PmenuSel#"
+    let statusstring.="%{FugitiveStatusline()}"
+    let statusstring.="%#PmenuSbar#"
+    let statusstring.="%m"
+    let statusstring.="\ %r"
+    let statusstring.="\ %y"
+    let statusstring.="%#CursorColumn#"
+    let statusstring.="\ %F"
+    let statusstring.="%="                  " Right side settings
+    let statusstring.="%#DiffChange#"
+    let statusstring.="\ %c:%l/%L\ "
+    let statusstring.="\ %p%%\ "
+    let statusstring.="\ [%n]"
+    return statusstring
+endfunction
+
+"set statusline=%#DiffText#
+set statusline=%!ModeStatusline()
+"set statusline+=\ %#PmenuSel#
+"set statusline+=%{FugitiveStatusline()}
+"set statusline+=%#WildMenu#
+"set statusline+=%m
+"set statusline+=\ %r
+"set statusline+=\ %y
+"set statusline+=%#CursorColumn#
+"set statusline+=\ %F
+"set statusline+=%=                  " Right side settings
+"set statusline+=%#DiffChange#
+"set statusline+=\ %c:%l/%L\ 
+"set statusline+=\ %p%%\ 
+"set statusline+=\ [%n]
+au! InsertEnter, InsertLeave, CmdlineEnter, CmdlineLeave * redraws
 au! BufWritePost $MYVIMRC source %  " auto source when writing to init.vim alternatively you can run :source $MYVIMRC
 
 

@@ -39,5 +39,6 @@
         ".virtualenvs"
     ],
     // Code Snippets
-    "coc.source.ultisnips.enable": true
+    "snippets.ultisnips.enable": true,
+    "snippets.userSnippetsDirectory": "C:/Users/n230104/AppData/Local/nvim/ultisnips"
 }

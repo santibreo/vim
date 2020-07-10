@@ -11,6 +11,7 @@ call plug#begin('~/AppData/Local/nvim/plugged')
     Plug 'ap/vim-css-color'
     " Autocomplete engine
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    " Snippets
     Plug 'honza/vim-snippets'
     Plug 'SirVer/ultisnips'
     " For Python
@@ -48,10 +49,11 @@ let g:user_emmet_leader_key=',' " same as user
 " Coc
 source $USERPROFILE\AppData\Local\nvim\settings\coc.vim
 source $USERPROFILE\AppData\Local\nvim\settings\coc-vimtex.vim
-"source $USERPROFILE\AppData\Local\nvim\settings\coc-snippets.vim
 
-"Ultisnips
-source $USERPROFILE\AppData\Local\nvim\settings\ultisnips.vim
+" Snippets
+source $USERPROFILE\AppData\Local\nvim\settings\snippets.vim
+"source $USERPROFILE\AppData\Local\nvim\settings\coc-snippets.vim
+"source $USERPROFILE\AppData\Local\nvim\settings\ultisnips.vim
 
 " Fugitive
 source $USERPROFILE\AppData\Local\nvim\settings\fugitive.vim
