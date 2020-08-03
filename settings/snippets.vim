@@ -32,7 +32,7 @@ nmap <leader>es :CocCommand snippets.editSnippets<cr>
 
 " ULTISNIPS
 "==========
-let g:UltiSnipsListSnippets = '<c-l>'
+let g:UltiSnipsListSnippets = '<c-tab>'
 let g:UltiSnipsExpandTrigger = '<c-space>'
 let g:UltiSnipsJumpForwardTrigger = '<c-j>'
 let g:UltiSnipsJumpBackwardTrigger = '<c-k>'

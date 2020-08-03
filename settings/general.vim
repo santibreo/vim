@@ -94,23 +94,11 @@ function! ModeStatusline()
     return statusstring
 endfunction
 
-"set statusline=%#DiffText#
 set statusline=%!ModeStatusline()
-"set statusline+=\ %#PmenuSel#
-"set statusline+=%{FugitiveStatusline()}
-"set statusline+=%#WildMenu#
-"set statusline+=%m
-"set statusline+=\ %r
-"set statusline+=\ %y
-"set statusline+=%#CursorColumn#
-"set statusline+=\ %F
-"set statusline+=%=                  " Right side settings
-"set statusline+=%#DiffChange#
-"set statusline+=\ %c:%l/%L\ 
-"set statusline+=\ %p%%\ 
-"set statusline+=\ [%n]
 au! InsertEnter, InsertLeave, CmdlineEnter, CmdlineLeave * redraws
-au! BufWritePost $MYVIMRC source %  " auto source when writing to init.vim alternatively you can run :source $MYVIMRC
+
+" Auto source when writing to init.vim 
+au! BufWritePost $MYVIMRC source %  
 
 
 " You can't stop me
@@ -120,7 +108,7 @@ cmap w!! w !sudo tee %
 " Color settings
 colorscheme gruvbox
 set background=dark
-hi ColorColumn guibg=#361212 ctermbg=246
+hi ColorColumn guibg=#353535 ctermbg=246
 
 
 " Disables automatic commenting on newline:
@@ -139,6 +127,3 @@ autocmd BufRead, BufNewFile *.tex set filetype=tex
 autocmd BufEnter *.tex set foldmethod=expr
 autocmd BufEnter *.tex set foldexpr=vimtex#fold#level(v:lnum)
 autocmd BufEnter *.tex set foldtext=vimtex#fold#text()
-autocmd BufRead,BufNewFile *.md,*.mdown,*.Rmd,*.rmd set filetype=markdown
-
-

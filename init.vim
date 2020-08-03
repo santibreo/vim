@@ -20,6 +20,10 @@ call plug#begin('~/AppData/Local/nvim/plugged')
     Plug 'mattn/emmet-vim'
     " For Latex
     Plug 'lervag/vimtex'
+    " For Rmarkdown
+    Plug 'vim-pandoc/vim-pandoc'
+    Plug 'vim-pandoc/vim-pandoc-syntax'
+    Plug 'vim-pandoc/vim-rmarkdown'
     " Fuzzy file search
 "    Plug 'vifm/vifm.vim'
     " Rip grep for faster searchs
@@ -34,7 +38,7 @@ source $USERPROFILE\AppData\Local\nvim\settings\keymappings.vim
 " Python and Node hosts
 let g:loaded_python_provider = 0
 let g:python3_host_prog = expand("c:\\program files\\python\\python")
-let g:node_host_prog = expand("c:\\users\\n230104\\appdata\\roaming\\npm\\node_modules\\neovim\\bin\\cli.js")
+let g:node_host_prog = expand("$USERPROFILE\\appdata\\roaming\\npm\\node_modules\\neovim\\bin\\cli.js")
 
 
 " configurations

@@ -47,11 +47,11 @@ inoremap kj <Esc>
 inoremap kk <Esc>
 
 " Easy CAPS
-inoremap <C-U> <ESC>viwUi
-nnoremap <C-U> viwU
+inoremap <C-s-up> <ESC>viwUi
+nnoremap <C-s-up> viwU
 " Easy LOWER
-inoremap <c-l> <ESC>viwui
-nnoremap <c-l> viwu
+inoremap <c-s-down> <ESC>viwui
+nnoremap <c-s-down> viwu
 " Easy TOGGLE
 nnoremap ~~ ~lh
 

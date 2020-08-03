@@ -36,7 +36,7 @@ aux = pd.DataFrame([[1,2,3],[4,5,6]], columns=["A", "B"])
 $0
 endsnippet
 
-snippet docbegin "Begin package documentation" b
+snippet docbeg "Begin package documentation" b
 """
 $1
 
@@ -44,4 +44,25 @@ $1
 """
 
 $0
+endsnippet
+
+snippet docmid "Begin of fuction, method or class documentation" bA
+"""
+$1
+"""
+$0
+endsnippet
+
+snippet dparam "Document your parameter" b
+:param ${1:param_name}: $2.
+:type ${1:param_name}: $3$0
+endsnippet
+
+snippet dreturn "Document your return" b
+:return: $1.
+:rtype: $2$0
+endsnippet
+
+snippet dclass "Document class citation" w
+:class:\`$1\`$0
 endsnippet
