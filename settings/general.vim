@@ -55,7 +55,7 @@ set autoindent                      " Keep previous line indentation if there is
 set noruler                         " Setting up rulers & spacing tabs
 " + POSITION 
 set cursorline                      " Highlight current line
-set colorcolumn=81                  " Highlight line limit
+set colorcolumn=80                  " Highlight line limit
 " + STATUSLINE
 " Function to get the current mode
 function! ModeStatusline()

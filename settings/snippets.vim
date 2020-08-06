@@ -16,8 +16,8 @@
 
 " Use <C-space> for trigger snippet expand.
 imap <c-space> <Plug>(coc-snippets-expand)
-" Use <C-j> for both expand and jump (make expand higher priority.)
-imap <c-j> <Plug>(coc-snippets-expand-jump)
+" Use <C-j> for both jump
+imap <c-j> <Plug>(coc-snippets-jump)
 " Use <C-j> for select text for visual placeholder of snippet.
 vmap <c-j> <Plug>(coc-snippets-select)
 " Use <C-j> for jump to next placeholder, it's default of coc.nvim
@@ -37,8 +37,10 @@ let g:UltiSnipsExpandTrigger = '<c-space>'
 let g:UltiSnipsJumpForwardTrigger = '<c-j>'
 let g:UltiSnipsJumpBackwardTrigger = '<c-k>'
 
+
 " Vertically split ultisnips edit window
 let g:UltiSnipsEditSplit="vertical"
+
 
 " Snippets directory
 "let g:UltiSnipsSnippetsDir="~/AppData/Local/nvim\ultisnips"

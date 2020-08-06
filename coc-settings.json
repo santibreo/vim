@@ -29,6 +29,9 @@
     "python.jediPath": "C:/Program Files/Python/Lib/site-packages",
     "python.formatting.provider": "black",
     "python.formatting.blackPath": "C:/Program Files/python/Scripts/black",
+    "python.formatting.blackArgs": [
+        "-l 79"
+    ],
     "python.linting.enabled": true,
     "python.linting.flake8Enabled": true,
     "python.linting.flake8Path": "C:/Program Files/python/Scripts/flake8",
