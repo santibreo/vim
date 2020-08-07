@@ -15,20 +15,21 @@
 "let g:coc_snippet_next = '<tab>'
 
 " Use <C-space> for trigger snippet expand.
-imap <c-space> <Plug>(coc-snippets-expand)
-" Use <C-j> for both jump
-imap <c-j> <Plug>(coc-snippets-jump)
-" Use <C-j> for select text for visual placeholder of snippet.
-vmap <c-j> <Plug>(coc-snippets-select)
-" Use <C-j> for jump to next placeholder, it's default of coc.nvim
-let g:coc_snippet_next = '<c-j>'
-" Use <C-k> for jump to previous placeholder, it's default of coc.nvim
-let g:coc_snippet_prev = '<c-k>'
-
+"imap <c-space> <Plug>(coc-snippets-expand)
+"" Use <C-j> for both jump
+"imap <c-j> <Plug>(coc-snippets-jump)
+"" Use <C-j> for select text for visual placeholder of snippet.
+"vmap <c-j> <Plug>(coc-snippets-select)
+"" Use <C-j> for jump to next placeholder, it's default of coc.nvim
+"let g:coc_snippet_next = '<c-j>'
+"" Use <C-k> for jump to previous placeholder, it's default of coc.nvim
+"let g:coc_snippet_prev = '<c-k>'
+"
 " Open UltiSnips edit function
 nmap <leader>es :CocCommand snippets.editSnippets<cr>
 
-"-------------------------------------------------------------------------------
+
+"------------------------------------------------------------------------------
 
 " ULTISNIPS
 "==========

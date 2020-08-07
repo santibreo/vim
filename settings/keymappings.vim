@@ -55,9 +55,9 @@ nnoremap <c-s-down> viwu
 " Easy TOGGLE
 nnoremap ~~ ~lh
 
-" Ctrl+TAB in general mode will move to text buffer
+" Ctrl+SHIFT+🡺  in general mode will move to text buffer
 nnoremap <C-S-right> :bnext<CR>
-" Ctrl+SHIFT+TAB will go back
+" Ctrl+SHIFT+🡸  will go back
 nnoremap <C-S-left> :bprevious<CR>
 
 " Use control-c instead of escape
@@ -78,3 +78,4 @@ tmap <C-j> <Esc><C-j>
 tmap <C-k> <Esc><C-k>
 tmap <C-h> <Esc><C-h>
 tmap <C-l> <Esc><C-l>
+

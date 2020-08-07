@@ -21,7 +21,7 @@
     "suggest.snippetIndicator": "[+]",
     "suggest.removeDuplicateItems": true,
     "suggest.detailField": "preview",
-    "suggest.labelMaxLength": 20,
+    "suggest.labelMaxLength": 50,
     "suggest.enablePreview": true,
     "list.maxHeight": 15,
     // python config
@@ -33,8 +33,10 @@
         "-l 79"
     ],
     "python.linting.enabled": true,
-    "python.linting.flake8Enabled": true,
-    "python.linting.flake8Path": "C:/Program Files/python/Scripts/flake8",
+    "python.linting.pylintEnabled": true,
+    "python.linting.pylintPath": "C:/Program Files/python/Scripts/pylint",
+    //"python.linting.flake8Enabled": true,
+    //"python.linting.flake8Path": "C:/Program Files/python/Scripts/flake8",
     "python.venvFolders": [
         "_pyenvs",
         "../venv",
