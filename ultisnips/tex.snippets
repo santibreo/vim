@@ -44,7 +44,7 @@ $0
 endsnippet
 
 # Document
-snippet document "document (or arbitrary) environment" bA
+snippet document "document (or arbitrary) environment" b
 \\begin{${1:document}}
 
 ${0:${VISUAL}}
@@ -53,7 +53,7 @@ ${0:${VISUAL}}
 endsnippet
 
 # Text edition
-snippet quote "Text quotation" wA
+snippet " "Text quotation" wA
 \`\`$1''$0
 endsnippet
 
@@ -92,7 +92,7 @@ if match:
 				 .replace("\\,", "")
 else:
 	snip.rv = ""
-` $0
+`$0
 endsnippet
 
 # Minimal inline math
@@ -103,7 +103,7 @@ if match:
 	snip.rv = f"{eval(match.group(1)):.3f}"
 else:
 	snip.rv = ""
-` $0
+`$0
 endsnippet
 
 # Magic byte
