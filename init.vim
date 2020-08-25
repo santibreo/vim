@@ -13,7 +13,7 @@ call plug#begin('~/AppData/Local/nvim/plugged')
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     " Snippets
     Plug 'honza/vim-snippets'
-    Plug 'SirVer/ultisnips'
+    " Plug 'SirVer/ultisnips'
     " For Python
     " Plug 'tell-k/vim-autopep8'
     " For HTML
@@ -55,8 +55,8 @@ source $USERPROFILE\AppData\Local\nvim\settings\coc.vim
 source $USERPROFILE\AppData\Local\nvim\settings\coc-vimtex.vim
 
 " Snippets
-source $USERPROFILE\AppData\Local\nvim\settings\snippets.vim
-"source $USERPROFILE\AppData\Local\nvim\settings\coc-snippets.vim
+"source $USERPROFILE\AppData\Local\nvim\settings\snippets.vim
+source $USERPROFILE\AppData\Local\nvim\settings\coc-snippets.vim
 "source $USERPROFILE\AppData\Local\nvim\settings\ultisnips.vim
 
 " Fugitive

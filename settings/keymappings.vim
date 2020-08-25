@@ -12,27 +12,17 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 " Open files in a split
-nnoremap <leader>hf <C-W>f
+nnoremap <leader>sf <C-W>f
 nnoremap <leader>vf <C-W>vgf
-
-" Folding with 
-"nnoremap <space> za 
 
 " Spell-check set to <leader>o, 'o' for 'orthography':
 imap <leader>o <ESC>:setlocal spell! spelllang=en<CR>
-
-" map S to replace current word with pasteboard
-nnoremap S diw"0P
 
 " Y to behave as D and P
 noremap Y y$
 
 " Open NETRW with Q
 noremap Q :Sexplore<CR>
-
-" Move selected lines
-"xnoremap J :move '>+1<CR>gv-gv 
-"xnoremap K :move '<-2<CR>gv-gv
 
 " Use <S-Left> to resize windows
 nnoremap <S-Down> :resize -2<CR>
@@ -47,29 +37,25 @@ inoremap kj <Esc>
 inoremap kk <Esc>
 
 " Easy CAPS
-inoremap <C-s-up> <ESC>viwUi
-nnoremap <C-s-up> viwU
+inoremap <leader>up <ESC>viwUi
+nnoremap <leader>up viwU
 " Easy LOWER
-inoremap <c-s-down> <ESC>viwui
-nnoremap <c-s-down> viwu
+inoremap <leader>dw <ESC>viwui
+nnoremap <leader>dw viwu
 " Easy TOGGLE
 nnoremap ~~ ~lh
 
-" Ctrl+SHIFT+🡺  in general mode will move to text buffer
-nnoremap <C-S-right> :bnext<CR>
-" Ctrl+SHIFT+🡸  will go back
-nnoremap <C-S-left> :bprevious<CR>
+" Ctrl+K  in general mode will move to text buffer
+nnoremap <C-K> :bnext<CR>
+" Ctrl+J  will go back
+nnoremap <C-J> :bprevious<CR>
 
 " Use control-c instead of escape
 inoremap <C-c> <Esc>
 
-" Better tabbing
+" Better tabbing on visual
 vnoremap < <gv
 vnoremap > >gv
-
-" Consoles
-nnoremap <C-p> :sp<CR>:term ipython<CR>
-nnoremap <C-ñ> :sp<CR>:term R<CR>
 
 " Can get out of terminal mode
 tnoremap <Esc> <C-\><C-n>

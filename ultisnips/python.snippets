@@ -66,3 +66,15 @@ endsnippet
 snippet dclass "Document class citation" w
 :class:\`$1\`$0
 endsnippet
+
+snippet @pget "Class property getter" b
+@property
+def ${1:prop_name}(self):
+	return self._${1:prop_name}$0
+endsnippet
+
+snippet @pset "Class property setter" b
+@${1:prop_name}.setter
+def ${1:prop_name}(self, $2):
+	self._${1:prop_name} = $3$0
+endsnippet

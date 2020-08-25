@@ -42,8 +42,8 @@
         "../venv",
         ".pyenv",
         ".virtualenvs"
-    ],
+    ]
     // Code Snippets
-    "snippets.ultisnips.enable": true,
-    "snippets.userSnippetsDirectory": "C:/Users/n230104/AppData/Local/nvim/ultisnips"
+    //"snippets.ultisnips.enable": true,
+    //"snippets.userSnippetsDirectory": "C:/Users/n230104/AppData/Local/nvim/ultisnips"
 }

@@ -1,24 +1,3 @@
-" ULTISNIPS
-let g:UltiSnipsExpandTrigger = '<c-space>'
-let g:UltiSnipsJumpForwardTrigger = '<C-j>'
-let g:UltiSnipsJumpBackwardTrigger = '<C-k>'
-
-" Vertically split ultisnips edit window
-let g:UltiSnipsEditSplit="vertical"
-
-" Snippets directory
-"let g:UltiSnipsSnippetsDir="~/AppData/Local/nvim\ultisnips"
-let g:UltiSnipsSnippetDirectories = [
-            \expand('$NVIMHOME\ultisnips'),
-            \'UltiSnips',
-            \'ultisnips'
-            \]
-
-" Open UltiSnips edit function
-"nmap <leader>ue :UltiSnipsEdit<cr>
-
-"-------------------------------------------------------------------------------
-
 " COC-SNIPPETS
 " To make <tab> work as VSCode
 "inoremap <silent><expr> <TAB>
