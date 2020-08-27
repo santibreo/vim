@@ -7,7 +7,8 @@ set spellfile=$NVIMHOME/dictionary/en.utf-8.add  " English words list
 set nocompatible                    " Avoid VI backward compatibility
 set encoding=utf-8
 set fileencoding=utf-8              " The encoding written to file
-set autoread
+set autoread                        " Alert if document is updated from outside
+set autowriteall                    " Updates documents edited outside of nvim
 syntax enable                       " Enable syntax highlighting 
 filetype plugin indent on           " Enable filetype Plugin & Indent
 set hidden                          " Enable re-usable window (needed for Coc)
@@ -16,6 +17,7 @@ set guitablabel=%t                  " Tab label is just the file name
 set updatetime=300                  " Faster completion
 set timeoutlen=500                  " By default timeoutlen is 1000 ms
 set confirm                         " Ask when leaving unsaved files
+set lazyredraw                      " Don't refresh that many times the whole screen
 " + BEHAVIOUR
 set scrolloff=3                     " Keep three lines between the cursor and the edge of the screen
 set breakindent                     " Preserve horizontal whitespace when wrapping
@@ -66,9 +68,10 @@ function! ModeStatusline()
     elseif c_mode ==? "v"
         let statusstring = '%#DiffText#'
         let statusstring .= ' VISUAL '
-    elseif c_mode ==? "r"
-        let statusstring = '%#DiffAdd#'
-        let statusstring .= ' REPLACE '
+    " This is not effective
+    "elseif c_mode ==? "r"
+    "    let statusstring = '%#DiffAdd#'
+    "    let statusstring .= ' REPLACE '
     elseif c_mode ==? "c"
         let statusstring = '%#DiffChange#'
         let statusstring .= ' COMMAND '

@@ -45,10 +45,10 @@ nnoremap <leader>dw viwu
 " Easy TOGGLE
 nnoremap ~~ ~lh
 
-" Ctrl+K  in general mode will move to text buffer
-nnoremap <C-K> :bnext<CR>
-" Ctrl+J  will go back
-nnoremap <C-J> :bprevious<CR>
+" Ctrl+N next buffer instead next line
+nnoremap <C-N> :bnext<CR>
+" Ctrl+P  previous buffer instead previous line
+nnoremap <C-P> :bprevious<CR>
 
 " Use control-c instead of escape
 inoremap <C-c> <Esc>
