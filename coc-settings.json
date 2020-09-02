@@ -12,10 +12,10 @@
     ],
     // diagnosis
     "diagnostic.refreshAfterSave": true,
-    "diagnostic.errorSign": "⛔",
-    "diagnostic.warningSign": "👁",
-    "diagnostic.infoSign": "❔",
-    "diagnostic.hintSign": "〰",
+    "diagnostic.errorSign": "xx",
+    "diagnostic.warningSign": "!!",
+    "diagnostic.infoSign": ">>",
+    "diagnostic.hintSign": "--",
     // suggestions
     "suggest.minTriggerInputLength": 2,
     "suggest.snippetIndicator": "[+]",
@@ -26,15 +26,18 @@
     "list.maxHeight": 15,
     // python config
     "python.jediEnabled": true,
-    "python.jediPath": "C:/Program Files/Python/Lib/site-packages",
+    "python.jediPath": "C:/Users/n230104/AppData/Local/Programs/Python/Python37/Lib/site-packages",
     "python.formatting.provider": "black",
-    "python.formatting.blackPath": "C:/Program Files/python/Scripts/black",
+    "python.formatting.blackPath": "C:/Users/n230104/AppData/Local/Programs/Python/Python37/Scripts/black",
     "python.formatting.blackArgs": [
         "-l 79"
     ],
     "python.linting.enabled": true,
     "python.linting.pylintEnabled": true,
-    "python.linting.pylintPath": "C:/Program Files/python/Scripts/pylint",
+    "python.linting.pylintPath": "C:/Users/n230104/AppData/Local/Programs/Python/Python37/Scripts/pylint",
+    "python.linting.pylintArgs": [
+        "--disable=F0401"
+    ],
     //"python.linting.flake8Enabled": true,
     //"python.linting.flake8Path": "C:/Program Files/python/Scripts/flake8",
     "python.venvFolders": [

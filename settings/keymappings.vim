@@ -11,6 +11,10 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+" Indentation guide
+nnoremap <leader>i :set cuc<CR>
+nnoremap <leader>ii :set nocuc<CR>
+
 " Open files in a split
 nnoremap <leader>sf <C-W>f
 nnoremap <leader>vf <C-W>vgf

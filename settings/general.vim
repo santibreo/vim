@@ -3,8 +3,8 @@
 let mapleader = ","
 
 " + BASICS
-set spellfile=$NVIMHOME/dictionary/en.utf-8.add  " English words list
 set nocompatible                    " Avoid VI backward compatibility
+set spellfile=$NVIMHOME/dictionary/en.utf-8.add  " English words list
 set encoding=utf-8
 set fileencoding=utf-8              " The encoding written to file
 set autoread                        " Alert if document is updated from outside

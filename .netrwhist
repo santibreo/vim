@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =1
+let g:netrw_dirhistcnt =2
+let g:netrw_dirhist_2='C:\Users\n230104\_DOING\Green'
 let g:netrw_dirhist_1='C:\Users\n230104\AppData\Local\nvim'
 let g:netrw_dirhist_0='C:/Users/n230104/AppData/Local/nvim/plugged/vim-rmarkdown/syntax'
 let g:netrw_dirhist_9='C:/Users/n230104/AppData/Local/nvim/plugged/vim-rmarkdown'
@@ -9,4 +10,3 @@ let g:netrw_dirhist_6='C:/Users/n230104/AppData/Local/Programs/bin'
 let g:netrw_dirhist_5='C:\Users\n230104\AppData\Local\Programs\bin'
 let g:netrw_dirhist_4='C:\Users\n230104\_DOING\Green\green'
 let g:netrw_dirhist_3='C:/Users/n230104/Documents/Plantillas_rmd/inst/rmarkdown/templates/apuntes_basic/skeleton'
-let g:netrw_dirhist_2='C:\Users\n230104\Desktop\2019_training_camp\auditoria\santi-donetes\winxcreator\docs\source'

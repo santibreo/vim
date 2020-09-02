@@ -20,12 +20,12 @@ call plug#begin('~/AppData/Local/nvim/plugged')
     Plug 'mattn/emmet-vim'
     " For Latex
     Plug 'lervag/vimtex'
-    " For Rmarkdown
-    Plug 'vim-pandoc/vim-pandoc'
-    Plug 'vim-pandoc/vim-pandoc-syntax'
-    Plug 'vim-pandoc/vim-rmarkdown'
+    " For Rmarkdown (I just don't like them)
+    "Plug 'vim-pandoc/vim-pandoc'
+    "Plug 'vim-pandoc/vim-pandoc-syntax'
+    "Plug 'vim-pandoc/vim-rmarkdown'
     " Fuzzy file search
-"    Plug 'vifm/vifm.vim'
+    "Plug 'vifm/vifm.vim'
     " Rip grep for faster searchs
     Plug 'jremmen/vim-ripgrep'
 call plug#end()
@@ -37,7 +37,7 @@ source $USERPROFILE\AppData\Local\nvim\settings\keymappings.vim
  
 " Python and Node hosts
 let g:loaded_python_provider = 0
-let g:python3_host_prog = expand("c:\\program files\\python\\python")
+let g:python3_host_prog = expand("C:\\Users\\n230104\\AppData\\Local\\Programs\\Python\\Python37\\python")
 let g:node_host_prog = expand("$USERPROFILE\\appdata\\roaming\\npm\\node_modules\\neovim\\bin\\cli.js")
 
 
@@ -48,7 +48,7 @@ let g:netrw_banner=1 " 0 to don't show a useless banner
 
 
 " emmet
-let g:user_emmet_leader_key=',' " same as user
+let g:user_emmet_leader_key=';' " same as user
 
 " Coc
 source $USERPROFILE\AppData\Local\nvim\settings\coc.vim
