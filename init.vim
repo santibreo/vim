@@ -20,6 +20,9 @@ call plug#begin('~/AppData/Local/nvim/plugged')
     Plug 'mattn/emmet-vim'
     " For Latex
     Plug 'lervag/vimtex'
+    " For Markdown
+    Plug 'tpope/vim-markdown'
+    Plug 'masukomi/vim-markdown-folding'
     " For Rmarkdown (I just don't like them)
     "Plug 'vim-pandoc/vim-pandoc'
     "Plug 'vim-pandoc/vim-pandoc-syntax'
@@ -48,7 +51,11 @@ let g:netrw_banner=1 " 0 to don't show a useless banner
 
 
 " emmet
-let g:user_emmet_leader_key=';' " same as user
+let g:user_emmet_leader_key=';' " Avoid conflicts with user
+
+" vim-markdown
+let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'r']
+
 
 " Coc
 source $USERPROFILE\AppData\Local\nvim\settings\coc.vim
