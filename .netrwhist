@@ -1,5 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =4
+let g:netrw_dirhistcnt =6
+let g:netrw_dirhist_6='C:\Users\n230104\Desktop\2020_validacion_ALM\Latex'
+let g:netrw_dirhist_5='C:\Users\n230104\_DOING\IV_report\report\Documents_Template\aux_TeX_files'
 let g:netrw_dirhist_4='C:/Users/n230104/_DOING/Green'
 let g:netrw_dirhist_3='C:\Users\n230104\_DOING\Green\green'
 let g:netrw_dirhist_2='C:/Users/n230104/_DOING/Green/green'
@@ -8,5 +10,3 @@ let g:netrw_dirhist_0='C:\Users\n230104\AppData\Local\nvim\plugged\vim-markdown-
 let g:netrw_dirhist_9='C:\Users\n230104\AppData\Local\nvim\plugged\vim-markdown-folding'
 let g:netrw_dirhist_8='C:/Users/n230104/AppData/Local/nvim/after/ftplugin'
 let g:netrw_dirhist_7='C:\Users\n230104\AppData\Local\nvim\after\ftplugin'
-let g:netrw_dirhist_6='C:/Users/n230104/_DOING/Green/sphinx_docs/source/products_summary'
-let g:netrw_dirhist_5='C:\Users\n230104\_DOING\Green\sphinx_docs\source\risk_factors_summary'
