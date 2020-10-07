@@ -40,8 +40,8 @@ source $USERPROFILE\AppData\Local\nvim\settings\keymappings.vim
  
 " Python and Node hosts
 let g:loaded_python_provider = 0
-let g:python3_host_prog = expand("C:\\Users\\n230104\\AppData\\Local\\Programs\\Python\\Python37\\python")
-let g:node_host_prog = expand("$USERPROFILE\\appdata\\roaming\\npm\\node_modules\\neovim\\bin\\cli.js")
+let g:python3_host_prog = expand("$USERPROFILE\\AppData\\Local\\Programs\\Python\\Python37\\python")
+let g:node_host_prog = expand("$USERPROFILE\\AppData\\Roaming\\npm\\node_modules\\neovim\\bin\\cli.js")
 
 
 " configurations
