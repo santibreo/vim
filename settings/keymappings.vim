@@ -20,10 +20,13 @@ nnoremap <leader>sf <C-W>f
 nnoremap <leader>vf <C-W>vgf
 
 " Spell-check set to <leader>o, 'o' for 'orthography':
-imap <leader>o <ESC>:setlocal spell! spelllang=en<CR>
+imap <leader>yesp <ESC>:setlocal spell! spelllang=en<CR>
+imap <leader>nosp <ESC>:setlocal nospell<CR>
 
-" Y to behave as D and P
+" Y, v and V to behave as D and P
 noremap Y y$
+noremap vv V
+noremap V v$
 
 " Open NETRW with Q
 noremap Q :Sexplore<CR>
@@ -35,17 +38,11 @@ nnoremap <S-Left> :vertical resize -2<CR>
 nnoremap <S-Right> :vertical resize +2<CR>
 
 " I hate escape more than anything else
-inoremap jk <Esc>
 inoremap jj <Esc>
-inoremap kj <Esc>
 inoremap kk <Esc>
+" Use control-c instead of escape
+inoremap <C-c> <Esc>
 
-" Easy CAPS
-inoremap <leader>up <ESC>viwUi
-nnoremap <leader>up viwU
-" Easy LOWER
-inoremap <leader>dw <ESC>viwui
-nnoremap <leader>dw viwu
 " Easy TOGGLE
 nnoremap ~~ ~lh
 
@@ -53,9 +50,6 @@ nnoremap ~~ ~lh
 nnoremap <C-N> :bnext<CR>
 " Ctrl+P  previous buffer instead previous line
 nnoremap <C-P> :bprevious<CR>
-
-" Use control-c instead of escape
-inoremap <C-c> <Esc>
 
 " Better tabbing on visual
 vnoremap < <gv

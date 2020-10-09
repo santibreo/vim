@@ -2,7 +2,6 @@
 " set leader key
 let mapleader = ","
 
-
 " + BASICS
 set nocompatible                    " Avoid VI backward compatibility
 set encoding=utf-8
@@ -20,9 +19,6 @@ set confirm                         " Ask when leaving unsaved files
 set lazyredraw                      " Don't refresh that many times the whole screen
 " + BEHAVIOUR
 set scrolloff=3                     " Keep three lines between the cursor and the edge of the screen
-set breakindent                     " Preserve horizontal whitespace when wrapping
-set showbreak=►..                   " Begin wrapped line with this
-set lbr                             " wrap words
 set backspace=indent,eol,start      " Allow backspacing over autoindent, line breaks and start of insert action
 set clipboard=unnamed,unnamedplus   " Access to the system clipboard
 set iskeyword+=-                    " treat dash separated words as a word text object
@@ -33,7 +29,7 @@ set splitbelow                      " Split below instead of above
 set splitright                      " Vsplit right instead of left
 set foldmethod=indent               " Enable folding based on indentation
 set foldlevel=99                    " Enable maximun folding levels
-set undodir=$NVIMHOME\undodir       " Where to save the undo files
+set undodir=$VIMHOME\undodir        " Where to save the undo files
 set undofile                        " Enable undo after file is closed
 " + DEACTIVATIONS
 set noerrorbells                    " Errors should not lead to a color orchestra
@@ -101,7 +97,7 @@ set statusline=%!ModeStatusline()
 au! InsertEnter, InsertLeave, CmdlineEnter, CmdlineLeave * redraws
 
 " Auto source when writing to init.vim 
-au! BufWritePost $MYVIMRC source %  
+au! BufWritePost $VIMRC source %  
 
 
 " You can't stop me
@@ -127,6 +123,3 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 "            \'.mdown': 'markdown'
 "            \}
 autocmd BufRead, BufNewFile *.tex set filetype=tex
-autocmd BufEnter *.tex set foldmethod=expr
-autocmd BufEnter *.tex set foldexpr=vimtex#fold#level(v:lnum)
-autocmd BufEnter *.tex set foldtext=vimtex#fold#text()

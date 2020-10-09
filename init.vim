@@ -1,5 +1,7 @@
+" TODO Make win - lin compatible
+
 " Plugins
-call plug#begin('~/AppData/Local/nvim/plugged')
+call plug#begin("$VIMHOME/plugged")
     " Better vim
     Plug 'tpope/vim-repeat'
     Plug 'tpope/vim-surround'
@@ -35,8 +37,8 @@ call plug#end()
 
 
 "General settings
-source $USERPROFILE\AppData\Local\nvim\settings\general.vim
-source $USERPROFILE\AppData\Local\nvim\settings\keymappings.vim
+source $VIMHOME\settings\general.vim
+source $VIMHOME\settings\keymappings.vim
  
 " Python and Node hosts
 let g:loaded_python_provider = 0
@@ -47,7 +49,7 @@ let g:node_host_prog = expand("$USERPROFILE\\AppData\\Roaming\\npm\\node_modules
 " configurations
 " netree
 let g:netrw_liststyle=3 " tree view type
-let g:netrw_banner=1 " 0 to don't show a useless banner
+let g:netrw_banner=1 " 0 to don't show a (not so) useless banner
 
 
 " emmet
@@ -58,14 +60,14 @@ let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'r']
 
 
 " Coc
-source $USERPROFILE\AppData\Local\nvim\settings\coc.vim
-source $USERPROFILE\AppData\Local\nvim\settings\coc-vimtex.vim
+source $VIMHOME\settings\coc.vim
+source $VIMHOME\settings\coc-vimtex.vim
+source $VIMHOME\settings\coc-snippets.vim
 
 " Snippets
 "source $USERPROFILE\AppData\Local\nvim\settings\snippets.vim
-source $USERPROFILE\AppData\Local\nvim\settings\coc-snippets.vim
 "source $USERPROFILE\AppData\Local\nvim\settings\ultisnips.vim
 
 " Fugitive
-source $USERPROFILE\AppData\Local\nvim\settings\fugitive.vim
+source $VIMHOME\settings\fugitive.vim
 
