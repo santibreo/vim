@@ -18,7 +18,8 @@ set timeoutlen=500                  " By default timeoutlen is 1000 ms
 set confirm                         " Ask when leaving unsaved files
 set lazyredraw                      " Don't refresh that many times the whole screen
 " + BEHAVIOUR
-set scrolloff=3                     " Keep three lines between the cursor and the edge of the screen
+set nowrap                          " Got respect from Primagen and do not use line wrapping
+set scrolloff=4                     " Keep three lines between the cursor and the edge of the screen
 set backspace=indent,eol,start      " Allow backspacing over autoindent, line breaks and start of insert action
 set clipboard=unnamed,unnamedplus   " Access to the system clipboard
 set iskeyword+=-                    " treat dash separated words as a word text object
