@@ -27,6 +27,7 @@ imap <leader>nosp <ESC>:setlocal nospell<CR>
 noremap Y y$
 noremap vv V
 noremap V v$
+vnoremap p "_dP
 
 " Open NETRW with Q
 noremap Q :Sexplore<CR>
