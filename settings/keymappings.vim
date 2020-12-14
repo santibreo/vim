@@ -56,6 +56,9 @@ nnoremap <C-P> :bprevious<CR>
 vnoremap < <gv
 vnoremap > >gv
 
+" Easy way to inser DateTime Flag
+inoremap <leader>dtf <ESC>:put=strftime('%a, %d %b %Y -- %H:%M:%S')<CR>
+
 " Can get out of terminal mode
 tnoremap <Esc> <C-\><C-n>
 tnoremap <expr> <leader><C-R> '<C-\><C-N>"'.nr2char(getchar()).'pi'

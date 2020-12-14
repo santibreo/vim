@@ -20,6 +20,7 @@ setlocal spelllang=en
 setlocal spell
 
 " Text formatting (wrap better than automatic line breaks)
+set wrap
 setlocal breakindent                     " Preserve horizontal whitespace when wrapping
 setlocal showbreak=►..                   " Begin wrapped line with this
 setlocal lbr                             " wrap words

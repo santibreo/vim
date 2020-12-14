@@ -25,12 +25,12 @@
     "suggest.enablePreview": true,
     "list.maxHeight": 15,
     // python config
-    "python.jediEnabled": true,
+    "python.jediEnabled": false,
     "python.jediPath": "C:/Users/n230104/AppData/Local/Programs/Python/Python37/Lib/site-packages",
     "python.formatting.provider": "black",
     "python.formatting.blackPath": "C:/Users/n230104/AppData/Local/Programs/Python/Python37/Scripts/black",
     "python.formatting.blackArgs": [
-        "-l 79"
+        "-l 80"
     ],
     "python.linting.enabled": true,
     "python.linting.pylintEnabled": true,
