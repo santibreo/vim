@@ -7,8 +7,7 @@
         "graphql",
         "html",
         "yaml",
-        "json",
-        "python"
+        "json"
     ],
     // diagnosis
     "diagnostic.refreshAfterSave": true,
@@ -23,10 +22,9 @@
     "suggest.detailField": "preview",
     "suggest.labelMaxLength": 50,
     "suggest.enablePreview": true,
-    "list.maxHeight": 15,
+    "suggest.maxCompleteItemCount": 15,
     // python config
-    "python.jediEnabled": false,
-    "python.jediPath": "C:/Users/n230104/AppData/Local/Programs/Python/Python37/Lib/site-packages",
+    "python.venvPath": "C:/Users/n230104/_pyenvs",
     "python.formatting.provider": "black",
     "python.formatting.blackPath": "C:/Users/n230104/AppData/Local/Programs/Python/Python37/Scripts/black",
     "python.formatting.blackArgs": [
@@ -38,15 +36,7 @@
     "python.linting.pylintArgs": [
         "--disable=F0401"
     ],
-    //"python.linting.flake8Enabled": true,
-    //"python.linting.flake8Path": "C:/Program Files/python/Scripts/flake8",
-    "python.venvFolders": [
-        "_pyenvs",
-        "../venv",
-        ".pyenv",
-        ".virtualenvs"
-    ]
     // Code Snippets
-    //"snippets.ultisnips.enable": true,
+    "snippets.ultisnips.enable": true
     //"snippets.userSnippetsDirectory": "C:/Users/n230104/AppData/Local/nvim/ultisnips"
 }

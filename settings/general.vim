@@ -1,6 +1,6 @@
 " Settings
 " set leader key
-let mapleader = ","
+let mapleader = " "
 
 " + BASICS
 set nocompatible                    " Avoid VI backward compatibility
@@ -19,7 +19,7 @@ set confirm                         " Ask when leaving unsaved files
 set lazyredraw                      " Don't refresh that many times the whole screen
 " + BEHAVIOUR
 set nowrap                          " Got respect from Primagen and do not use line wrapping
-set scrolloff=4                     " Keep three lines between the cursor and the edge of the screen
+set scrolloff=4                     " Keep 4 lines between the cursor and the edge of the screen
 set backspace=indent,eol,start      " Allow backspacing over autoindent, line breaks and start of insert action
 set clipboard=unnamed,unnamedplus   " Access to the system clipboard
 set iskeyword+=-                    " treat dash separated words as a word text object
