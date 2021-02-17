@@ -10,7 +10,7 @@
         "json"
     ],
     // diagnosis
-    "diagnostic.refreshAfterSave": true,
+    "diagnostic.refreshOnInsertMode": true,
     "diagnostic.errorSign": "xx",
     "diagnostic.warningSign": "!!",
     "diagnostic.infoSign": ">>",
@@ -24,7 +24,7 @@
     "suggest.enablePreview": true,
     "suggest.maxCompleteItemCount": 15,
     // python config
-    "python.venvPath": "C:/Users/n230104/_pyenvs",
+    "python.venvPath": "C:/Users/n230104/.virtualenvs",
     "python.formatting.provider": "black",
     "python.formatting.blackPath": "C:/Users/n230104/AppData/Local/Programs/Python/Python37/Scripts/black",
     "python.formatting.blackArgs": [

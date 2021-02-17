@@ -6,6 +6,7 @@ call plug#begin("$VIMHOME/plugged")
     Plug 'tpope/vim-repeat'
     Plug 'tpope/vim-surround'
     Plug 'junegunn/goyo.vim'
+    Plug 'sheerun/vim-polyglot'
     " Git
     Plug 'tpope/vim-fugitive'
     " Colors
@@ -17,7 +18,6 @@ call plug#begin("$VIMHOME/plugged")
     Plug 'honza/vim-snippets'
     " Plug 'SirVer/ultisnips'
     " For Python
-
     " Plug 'tell-k/vim-autopep8'
     " For HTML
     Plug 'mattn/emmet-vim'
@@ -44,8 +44,8 @@ source $VIMHOME\settings\keymappings.vim
  
 " Python and Node hosts
 let g:loaded_python_provider = 0
-let g:python3_host_prog = expand("$USERPROFILE\\AppData\\Local\\Programs\\Python\\Python37\\python.exe")
-let g:node_host_prog = expand("$USERPROFILE\\AppData\\Roaming\\npm\\node_modules\\neovim\\bin\\cli.js")
+let g:python3_host_prog = expand("$USERPROFILE\\AppData\\Local\\Programs\\Python\\Python39\\python.exe")
+let g:node_host_prog = expand("$USERPROFILE\\AppData\\Local\\Programs\\node-v14.15.5x64\\node_modules\\neovim\\bin\\cli.js")
 
 
 " configurations
