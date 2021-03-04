@@ -31,3 +31,5 @@ setlocal lbr                             " wrap words
 " setlocal fo+=w
 " setlocal fo+=c
 
+" Fold level
+setlocal foldlevel=1

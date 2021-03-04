@@ -1,5 +1,5 @@
 " coc-vimtex
-"let g:vimtex_compiler_progname = 'nvr'
+let g:vimtex_compiler_progname='nvr'
 let g:vimtex_latexmk_build_dir='metafiles'
 let g:tex_flavor='latex'           " detect .tex files as latex not plaintex
 

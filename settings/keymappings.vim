@@ -39,8 +39,9 @@ nnoremap <S-Left> :vertical resize -2<CR>
 nnoremap <S-Right> :vertical resize +2<CR>
 
 " I hate escape more than anything else
-inoremap jj <Esc>
-inoremap kk <Esc>
+inoremap jk <Esc>
+inoremap kj <Esc>
+inoremap <Esc> <nop>
 " Use control-c instead of escape
 inoremap <C-c> <Esc>
 
@@ -57,7 +58,7 @@ vnoremap < <gv
 vnoremap > >gv
 
 " Easy way to inser DateTime Flag
-inoremap <leader>dtf <ESC>:put=strftime('%a, %d %b %Y -- %H:%M:%S')<CR>
+inoremap <leader>dtf <ESC>:put=strftime('%d-%m-%Y %H:%M:%S')<CR>
 
 " Can get out of terminal mode
 tnoremap <Esc> <C-\><C-n>
