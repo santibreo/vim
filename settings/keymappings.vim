@@ -1,6 +1,7 @@
 " Key Remapping
 " Empty lines
-nmap <CR> o<ESC>k
+nmap <CR> ojkk
+nmap <S-CR> Ojkj
 
 " Goyo
 map <C-g> :Goyo<CR>
@@ -24,9 +25,9 @@ imap <leader>yesp <ESC>:setlocal spell! spelllang=en<CR>
 imap <leader>nosp <ESC>:setlocal nospell<CR>
 
 " Y, v and V to behave as D and P
-noremap Y y$
+noremap Y yg_
 noremap vv V
-noremap V v$
+noremap V vg_
 vnoremap p "_dP
 
 " Open NETRW with Q
@@ -41,7 +42,6 @@ nnoremap <S-Right> :vertical resize +2<CR>
 " I hate escape more than anything else
 inoremap jk <Esc>
 inoremap kj <Esc>
-inoremap <Esc> <nop>
 " Use control-c instead of escape
 inoremap <C-c> <Esc>
 
