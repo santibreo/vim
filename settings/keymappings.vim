@@ -16,7 +16,8 @@ nnoremap <C-H> <C-W><C-H>
 nnoremap <leader>i :set cuc<CR>
 nnoremap <leader>ii :set nocuc<CR>
 
-" Open files in a split
+" Use splits instead og tabs
+nnoremap gf <C-W>gf
 nnoremap <leader>sf <C-W>f
 nnoremap <leader>vf <C-W>vgf
 
@@ -28,30 +29,29 @@ imap <leader>nosp <ESC>:setlocal nospell<CR>
 noremap Y yg_
 noremap vv V
 noremap V vg_
-vnoremap p "_dP
+vnoremap p "_dp
+vnoremap P "_dP
 
 " Open NETRW with Q
 noremap Q :Sexplore<CR>
 
 " Use <S-Left> to resize windows
-nnoremap <S-Down> :resize -2<CR>
-nnoremap <S-Up> :resize +2<CR>
-nnoremap <S-Left> :vertical resize -2<CR>
-nnoremap <S-Right> :vertical resize +2<CR>
+nnoremap <S-j> :resize -2<CR>
+nnoremap <S-k> :resize +2<CR>
+nnoremap <S-l> :vertical resize -2<CR>
+nnoremap <S-h> :vertical resize +2<CR>
 
 " I hate escape more than anything else
 inoremap jk <Esc>
 inoremap kj <Esc>
-" Use control-c instead of escape
-inoremap <C-c> <Esc>
 
 " Easy TOGGLE
 nnoremap ~~ ~lh
 
 " Ctrl+N next buffer instead next line
-nnoremap <C-N> :bnext<CR>
+nnoremap <C-N> :tabn<CR>
 " Ctrl+P  previous buffer instead previous line
-nnoremap <C-P> :bprevious<CR>
+nnoremap <C-P> :tabp<CR>
 
 " Better tabbing on visual
 vnoremap < <gv

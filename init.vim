@@ -36,6 +36,8 @@ call plug#begin("$VIMHOME/plugged")
     Plug 'junegunn/fzf.vim'
     " Rip grep for faster searchs
     Plug 'jremmen/vim-ripgrep'
+    " REPL
+    Plug 'sillybun/vim-repl'
 call plug#end()
 
 
