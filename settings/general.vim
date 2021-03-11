@@ -1,6 +1,6 @@
 " Settings
 " set leader key
-let mapleader = " "
+let mapleader = ","
 
 " + BASICS
 set nocompatible                    " Avoid VI backward compatibility
@@ -8,7 +8,7 @@ set encoding=utf-8
 set fileencoding=utf-8              " The encoding written to file
 set autoread                        " Alert if document is updated from outside
 set autowriteall                    " Updates documents edited outside of nvim
-syntax enable                       " Enable syntax highlighting 
+syntax enable                       " Enable syntax highlighting
 filetype plugin indent on           " Enable filetype Plugin & Indent
 set hidden                          " Enable re-usable window (needed for Coc)
 set showtabline=2                   " Always show tabs
@@ -52,7 +52,7 @@ set expandtab
 "set softtabstop=4                   " Tab key stroke = 4
 set autoindent                      " Keep previous line indentation if there isn't a filetype-specific one
 set noruler                         " Setting up rulers & spacing tabs
-" + POSITION 
+" + POSITION
 set cursorline                      " Highlight current line
 set colorcolumn=80                  " Highlight line limit
 " + STATUSLINE
@@ -97,8 +97,8 @@ endfunction
 set statusline=%!ModeStatusline()
 au! InsertEnter, InsertLeave, CmdlineEnter, CmdlineLeave * redraws
 
-" Auto source when writing to init.vim 
-au! BufWritePost $VIMRC source %  
+" Auto source when writing to init.vim
+au! BufWritePost $VIMRC source %
 
 
 " You can't stop me

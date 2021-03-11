@@ -16,8 +16,9 @@ nnoremap <C-H> <C-W><C-H>
 nnoremap <leader>i :set cuc<CR>
 nnoremap <leader>ii :set nocuc<CR>
 
-" Use splits instead og tabs
-nnoremap gf <C-W>gf
+" Use tabs instead of buffers
+nnoremap gf         <C-W>gf
+nnoremap <leader>t  :tabnew<space>
 nnoremap <leader>sf <C-W>f
 nnoremap <leader>vf <C-W>vgf
 
