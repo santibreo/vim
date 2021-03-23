@@ -18,7 +18,6 @@ call plug#begin("$VIMHOME/plugged")
     Plug 'honza/vim-snippets'
     " Plug 'SirVer/ultisnips'
     " For Python
-
     " Plug 'tell-k/vim-autopep8'
     " For HTML
     Plug 'mattn/emmet-vim'
@@ -46,8 +45,13 @@ source $VIMHOME\settings\general.vim
 source $VIMHOME\settings\keymappings.vim
 " Python and Node hosts
 let g:loaded_python_provider = 0
+<<<<<<< HEAD
 let g:python3_host_prog = expand("$LOCALAPPDATA\\Programs\\Python\\Python39\\python.exe")
 let g:node_host_prog = expand("$LOCALAPPDATA\\Programs\\node-v14.16.0-win-x64\\node_modules\\neovim\\bin\\cli.js")
+=======
+let g:python3_host_prog = expand("$USERPROFILE\\AppData\\Local\\Programs\\Python\\Python39\\python.exe")
+let g:node_host_prog = expand("$USERPROFILE\\AppData\\Local\\Programs\\node-v14.15.5x64\\node_modules\\neovim\\bin\\cli.js")
+>>>>>>> a50422c9ef9c07a46ac8953b46459a30fb9e2508
 
 
 " CONFIGURATIONS
