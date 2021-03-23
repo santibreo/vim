@@ -76,4 +76,6 @@ source $VIMHOME\settings\fugitive.vim
 autocmd BufEnter * silent! lcd %:p:h
 " Remove trailing spaces at saving
 autocmd BufWritePre * %s/\s\+$//e
+" Set Rmarkdown filetype correctly
+autocmd BufNewFile,BufRead *.Rmd,*.rmd,*.Rmarkdown,*.rmarkdown set filetype=rmd
 

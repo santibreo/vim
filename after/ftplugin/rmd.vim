@@ -1,6 +1,6 @@
 source $VIMHOME\after\ftplugin\gendocs.vim
 
-" Cool folding 
+" Cool folding
 setlocal foldmethod=syntax
 
 " Rmarkdown compile
@@ -27,5 +27,3 @@ endfunction
 nnoremap <buffer> <leader>ren :call RmdRender()<cr>
 nnoremap <buffer> <leader>ope :call HtmlOpen()<cr>
 nnoremap <buffer> <leader>ren! :call RmdRender()<cr> :call HtmlOpen()<cr>
-
-

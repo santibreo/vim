@@ -10,7 +10,6 @@
         "json"
     ],
     // diagnosis
-    "diagnostic.refreshAfterSave": true,
     "diagnostic.errorSign": "xx",
     "diagnostic.warningSign": "!!",
     "diagnostic.infoSign": ">>",
@@ -37,6 +36,9 @@
         "--disable=F0401"
     ],
     // Code Snippets
-    "snippets.ultisnips.enable": true
+    "snippets.ultisnips.enable": true,
+    "snippets.ultisnips.directories": [
+        "ultisnips"
+    ]
     //"snippets.userSnippetsDirectory": "C:/Users/n230104/AppData/Local/nvim/ultisnips"
 }
