@@ -37,10 +37,10 @@ vnoremap P "_dP
 noremap Q :Sexplore<CR>
 
 " Use <S-Left> to resize windows
-nnoremap <S-j> :resize -2<CR>
-nnoremap <S-k> :resize +2<CR>
-nnoremap <S-l> :vertical resize -2<CR>
-nnoremap <S-h> :vertical resize +2<CR>
+nnoremap <M-j> :resize -2<CR>
+nnoremap <M-k> :resize +2<CR>
+nnoremap <M-l> :vertical resize -2<CR>
+nnoremap <M-h> :vertical resize +2<CR>
 
 " I hate escape more than anything else
 inoremap jk <Esc>
@@ -58,7 +58,7 @@ nnoremap <C-P> :tabp<CR>
 vnoremap < <gv
 vnoremap > >gv
 
-" Easy way to inser DateTime Flag
+" Easy way to insert DateTime Flag
 inoremap <leader>dtf <ESC>:put=strftime('%d-%m-%Y %H:%M:%S')<CR>
 
 " Can get out of terminal mode

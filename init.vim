@@ -20,7 +20,7 @@ call plug#begin("$VIMHOME/plugged")
     " For Python
     " Plug 'tell-k/vim-autopep8'
     " For HTML
-    Plug 'mattn/emmet-vim'
+    Plug 'mattn/emmet-vim' { 'for': ['html', 'css'] }
     " For Latex
     Plug 'lervag/vimtex'
     " For Markdown
@@ -67,6 +67,8 @@ source $VIMHOME\settings\coc-snippets.vim
 "source $USERPROFILE\AppData\Local\nvim\settings\ultisnips.vim
 " Fugitive
 source $VIMHOME\settings\fugitive.vim
+" REPL
+source $VIMHOME\settings\repl.vim
 
 
 " AUTOCOMMANDS
