@@ -20,7 +20,7 @@ call plug#begin("$VIMHOME/plugged")
     " For Python
     " Plug 'tell-k/vim-autopep8'
     " For HTML
-    Plug 'mattn/emmet-vim' { 'for': ['html', 'css'] }
+    Plug 'mattn/emmet-vim', { 'for': ['html', 'css'] }
     " For Latex
     Plug 'lervag/vimtex'
     " For Markdown
