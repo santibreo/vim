@@ -10,10 +10,46 @@
         "json"
     ],
     // diagnosis
+    "diagnostic-languageserver.enable": true,
     "diagnostic.errorSign": "xx",
     "diagnostic.warningSign": "!!",
     "diagnostic.infoSign": ">>",
     "diagnostic.hintSign": "--",
+    "diagnostic-languageserver.filetypes": {
+        "vim": "vint",
+        "tex": ["proselint", "write-good", "grammarous"],
+        "python": "pylint",
+        "text": ["proselint", "grammarous"]
+    },
+    "diagnostic-languageserver.formatFiletypes": {
+        "python": ["black", "isort"],
+        "sh": "shfmt"
+    },
+    "diagnostic-languageserver.linters": {
+        "proselint": {
+            "command": "proselint",
+            "isStdout": true,
+            "isStderr": false,
+            "debounce": 100,
+            "args": ["-"],
+            "offsetLine": 0,
+            "offsetColumn": 0,
+            "sourceName": "proselint",
+            "formatLines": 1,
+            "formatPattern": [
+                "^[^:]+:(\\d+):(\\d+):(\\s)(.*)$",
+                {
+                    "line": 1,
+                    "column": 2,
+                    "security": 3,
+                    "message": 4
+                }
+            ],
+            "securities": {
+                " ": "info"
+            }
+        }
+    },
     // suggestions
     "suggest.minTriggerInputLength": 2,
     "suggest.snippetIndicator": "[+]",
