@@ -85,7 +85,7 @@ function! ModeStatusline()
     let statusstring.="\ %r"
     let statusstring.="\ %y"
     let statusstring.="%#CursorColumn#"
-    let statusstring.="\ %F"
+    let statusstring.="\ %-015.20F"
     let statusstring.="%="                  " Right side settings
     let statusstring.="%#DiffChange#"
     let statusstring.="\ %c:%l/%L\ "

@@ -7,6 +7,7 @@ call plug#begin("$VIMHOME/plugged")
     Plug 'tpope/vim-surround'
     Plug 'junegunn/goyo.vim'
     Plug 'sheerun/vim-polyglot'
+    Plug 'rhysd/vim-grammarous'
     " Git
     Plug 'tpope/vim-fugitive'
     " Colors

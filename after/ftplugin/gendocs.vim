@@ -31,5 +31,9 @@ setlocal lbr                             " wrap words
 " setlocal fo+=w
 " setlocal fo+=c
 
+" Mappings
+nnoremap <buffer> <leader>grammar :GrammarousCheck<CR>
+nnoremap <buffer> <leader>style :cexpr system('proselint ' . expand('%:p'))<CR>
+
 " Fold level
 setlocal foldlevel=1
