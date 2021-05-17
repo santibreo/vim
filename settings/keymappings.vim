@@ -48,10 +48,12 @@ inoremap kj <Esc>
 " Easy TOGGLE
 nnoremap ~~ ~lh
 
-" Ctrl+N next buffer instead next line
-nnoremap <C-N> :bn<CR>
-" Ctrl+P  previous buffer instead previous line
-nnoremap <C-P> :bp<CR>
+" ,+n next buffer instead next line
+nnoremap <leader>n  :bn<CR>
+" ,+p  previous buffer instead previous line
+nnoremap <leader>p  :bp<cr>
+" ,+d  previous buffer instead previous line
+nnoremap <leader>d  :bd<cr>
 
 " Better tabbing on visual
 vnoremap < <gv

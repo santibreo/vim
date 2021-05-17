@@ -56,6 +56,8 @@ let g:netrw_banner=1 " 0 to don't show a (not so) useless banner
 let g:user_emmet_leader_key=',' " Avoid conflicts with user
 let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
+" FZF
+nnoremap <C-p> :FZF<CR>
 " vim-markdown
 let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'r', 'css']
 " Coc
