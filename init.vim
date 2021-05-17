@@ -33,7 +33,6 @@ call plug#begin("$VIMHOME/plugged")
     "Plug 'vim-pandoc/vim-rmarkdown'
     " Fuzzy file search
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-    Plug 'junegunn/fzf.vim'
     " Rip grep for faster searchs
     Plug 'jremmen/vim-ripgrep'
     " REPL
@@ -79,4 +78,3 @@ autocmd BufEnter * silent! lcd %:p:h
 autocmd BufWritePre * %s/\s\+$//e
 " Set Rmarkdown filetype correctly
 autocmd BufNewFile,BufRead *.Rmd,*.rmd,*.Rmarkdown,*.rmarkdown set filetype=rmd
-

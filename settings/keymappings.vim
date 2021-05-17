@@ -17,7 +17,6 @@ nnoremap <leader>i :set cuc<CR>
 nnoremap <leader>ii :set nocuc<CR>
 
 " Use tabs instead of buffers
-nnoremap gf         <C-W>gf
 nnoremap <leader>t  :tabnew<space>
 nnoremap <leader>sf <C-W>f
 nnoremap <leader>vf <C-W>vgf
@@ -50,9 +49,9 @@ inoremap kj <Esc>
 nnoremap ~~ ~lh
 
 " Ctrl+N next buffer instead next line
-nnoremap <C-N> :tabn<CR>
+nnoremap <C-N> :bn<CR>
 " Ctrl+P  previous buffer instead previous line
-nnoremap <C-P> :tabp<CR>
+nnoremap <C-P> :bp<CR>
 
 " Better tabbing on visual
 vnoremap < <gv
