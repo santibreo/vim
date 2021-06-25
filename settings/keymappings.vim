@@ -1,10 +1,32 @@
 " Key Remapping
+
+" set leader key
+let mapleader = ","
+
+" Commands
+nnoremap : ;
+nnoremap ; :
+
+" No arrows for you
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
+inoremap <Up> <Nop>
+inoremap <Down> <Nop>
+inoremap <Left> <Nop>
+inoremap <Right> <Nop>
+
+" Save faster
+nmap <C-s> ;wa<CR>
+imap <C-s> <ESC>;wa<CR>a
+
+" Goyo
+nmap <C-g> ;Goyo<CR>
+
 " Empty lines
 nmap <CR> ojkk
 nmap <S-CR> Ojkj
-
-" Goyo
-map <C-g> :Goyo<CR>
 
 " Faster splits movement
 nnoremap <C-J> <C-W><C-J>
@@ -22,8 +44,8 @@ nnoremap <leader>sf <C-W>f
 nnoremap <leader>vf <C-W>vgf
 
 " Spell-check set to <leader>o, 'o' for 'orthography':
-imap <leader>yesp <ESC>:setlocal spell! spelllang=en<CR>
-imap <leader>nosp <ESC>:setlocal nospell<CR>
+imap <leader>ysp <ESC>;setlocal spell! spelllang=en<CR>
+imap <leader>nsp <ESC>;setlocal nospell<CR>
 
 " Y, v and V to behave as D and P
 noremap Y yg_
@@ -41,7 +63,7 @@ nnoremap <M-k> :resize +2<CR>
 nnoremap <M-l> :vertical resize -2<CR>
 nnoremap <M-h> :vertical resize +2<CR>
 
-" I hate escape more than anything else
+" Back to normality
 inoremap jk <Esc>
 inoremap kj <Esc>
 
@@ -56,8 +78,8 @@ nnoremap <leader>p  :bp<cr>
 nnoremap <leader>d  :bd<cr>
 
 " Better tabbing on visual
-vnoremap < <gv
 vnoremap > >gv
+vnoremap < <gv
 
 " Easy way to insert DateTime Flag
 inoremap <leader>dtf <ESC>:put=strftime('%d-%m-%Y %H:%M:%S')<CR>

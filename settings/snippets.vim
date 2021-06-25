@@ -46,7 +46,7 @@ let g:UltiSnipsEditSplit="vertical"
 " Snippets directory
 "let g:UltiSnipsSnippetsDir="~/AppData/Local/nvim\ultisnips"
 let g:UltiSnipsSnippetDirectories = [
-            \expand('$NVIMHOME\ultisnips'),
+            \expand('$VIMHOME\ultisnips'),
             \'UltiSnips',
             \'ultisnips'
             \]

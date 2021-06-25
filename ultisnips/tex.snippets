@@ -25,7 +25,13 @@
 # Online reference:
 # 	https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt
 
-# Article
+# Chunks ----------------------------------------------------------------------
+snippet 1l "Magic byte line" bA
+%!TeX program = ${1:xelatex}
+
+$0
+endsnippet
+
 snippet article "Begin article" b
 \\documentclass{article}
 
@@ -43,8 +49,26 @@ snippet article "Begin article" b
 $0
 endsnippet
 
-# Document
-snippet document "document (or arbitrary) environment" b
+snippet santicle "Santander Document" bA
+\\documentclass{ModelRiskReport}
+endsnippet
+
+snippet almsty "ALM latex template" bA
+\usepackage[version=${1}]{${2:ALMTemplate}}
+$0
+endsnippet
+
+# References ------------------------------------------------------------------
+snippet annex "Reference to Annex" w
+Annex~\\ref\{annex:$1\}$0
+endsnippet
+
+snippet equation "Reference to equation" w
+Equation~\\eqref\{eq:$1\}$0
+endsnippet
+
+# Environments and blocks -----------------------------------------------------
+snippet document "Document (or arbitrary) environment" b
 \\begin{${1:document}}
 
 ${0:${VISUAL}}
@@ -52,28 +76,32 @@ ${0:${VISUAL}}
 \\end{$1}
 endsnippet
 
-# Text edition
-snippet " "Text quotation" wA
-\`\`$1''$0
-endsnippet
+# Math related
+snippet omb "Outline Math Block" bA
 
-# Basic math
-snippet mk "Inline math" wA
-\$${1}\$$0
-endsnippet
+\\begin\{align\}
+	$1 \label\{eq:$2\}
+\\end\{align\}
 
-snippet dm "Math block" wA
-\[
-	$1
-.\]
 $0
 endsnippet
 
-snippet // "Fraction" iA
-\\frac{$1}{$2}$0
+snippet bconds "Equation conditions" bA
+\\begin\{conditions\}
+	$1 & $2 & $3\\\\
+	$4 & $5 & $6
+\\end\{conditions\}
+
+$0
 endsnippet
 
-# Simpy blocks
+snippet mbcases "Begin cases" w
+\\begin\{cases\}
+$1\\\\
+$2
+\\end\{cases\}$0
+endsnippet
+
 snippet sympy "Sympy block " w
 sympyin $1 sympyout$0
 endsnippet
@@ -95,26 +123,51 @@ else:
 `$0
 endsnippet
 
-# Minimal inline math
-priority 3
-snippet "eval([0-9-+*/]+)" "Inline calc" wr
-`!p
-if match:
-	snip.rv = f"{eval(match.group(1)):.3f}"
-else:
-	snip.rv = ""
-`$0
+# Inline editions -------------------------------------------------------------
+snippet " "Text quotation" wA
+\`\`$1''$0
 endsnippet
 
-# Magic byte
-snippet 1l "Write magic byte line" bA
-%!TeX program = ${1:xelatex}
-
-$0
+snippet ttt "Teletyped text" wA
+\\texttt\{$1\}$0
 endsnippet
 
-# ALM sty
-snippet almsty "Use ALM latex template" bA
-\usepackage[${1:FinalVersion}]{ALMTemplate}
-$0
+snippet rrrt "Red text" wA
+\\textcolor{SantanderRed}{$1}$0
+endsnippet
+
+snippet imb "Inline math block" w
+\\($1\\)$0
+endsnippet
+
+snippet mqq "qquad" wA
+\\qquad
+endsnippet
+
+snippet mtxt "Math text" wA
+\\text\{$1\}$0
+endsnippet
+
+snippet gls "Acronymns" w
+\\gls{$0}
+endsnippet
+
+snippet glspl "Acronymns plural" w
+\\glspl{$0}
+endsnippet
+
+snippet scomm "Add comment made by me" iA
+\\Santi{$1}$0
+endsnippet
+
+snippet -- "List item" bA
+\\item $0
+endsnippet
+
+snippet o-- "List item open" bA
+\\item[\$\\square\$] $0
+endsnippet
+
+snippet c-- "List item closed" bA
+\\item[\$\\boxtimes\$] $0
 endsnippet

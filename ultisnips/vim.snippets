@@ -22,16 +22,4 @@
 #		public readonly ${1/^_(.*)/$1/}: Event<$2> = this.$1.event
 #		endsnippet
 #
-# Online reference:
-# 	https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt
-
-snippet "listfiles(.*)" "List the files into a given path" br
-`!p
-import os
-if match and os.path.isdir(match.group(1)):
-	snip.rv = "\n".join(os.listdir(match.group(1)))
-else:
-	snip.rv = "\n".join(os.listdir("."))
-`
-$0
-endsnippet
+# Online reference: https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt

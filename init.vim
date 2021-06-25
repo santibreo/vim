@@ -43,6 +43,7 @@ call plug#end()
 " GENERAL SETTINGS
 source $VIMHOME\settings\general.vim
 source $VIMHOME\settings\keymappings.vim
+
 " Python and Node hosts
 let g:loaded_python_provider = 0
 let g:python3_host_prog = expand("$LOCALAPPDATA\\Programs\\Python\\Python39\\python.exe")

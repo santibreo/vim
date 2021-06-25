@@ -13,6 +13,11 @@
 "
 "let g:coc_snippet_next = '<tab>'
 
+
+" +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+" Package options
+
+
 " Use <C-space> for trigger snippet expand.
 imap <C-space> <Plug>(coc-snippets-expand)
 " Use <C-j> for both expand and jump (make expand higher priority.)
@@ -25,4 +30,4 @@ let g:coc_snippet_next = '<c-j>'
 let g:coc_snippet_prev = '<c-k>'
 
 " Open UltiSnips edit function
-nmap <leader>es :CocCommand snippets.editSnippets<cr>
+nnoremap <leader>es :CocCommand snippets.editSnippets<cr>

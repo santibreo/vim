@@ -1,6 +1,4 @@
 " Settings
-" set leader key
-let mapleader = ","
 
 " + BASICS
 set nocompatible                    " Avoid VI backward compatibility
@@ -28,8 +26,9 @@ set pumheight=20                    " Makes popup menu smaller
 set cmdheight=2                     " Avoid many cases of having to 'press <Enter> to continue'
 set splitbelow                      " Split below instead of above
 set splitright                      " Vsplit right instead of left
-set foldmethod=indent               " Enable folding based on indentation
-set foldlevel=99                    " Enable maximun folding levels
+set foldenable                      " Enable folding
+set foldmethod=indent               "   - Based on indentation
+set foldlevel=0                     "   - All folds closed up to 1 level
 set undodir=$VIMHOME\undodir        " Where to save the undo files
 set undofile                        " Enable undo after file is closed
 " + DEACTIVATIONS
@@ -65,10 +64,9 @@ function! ModeStatusline()
     elseif c_mode ==? "v"
         let statusstring = '%#DiffText#'
         let statusstring .= ' VISUAL '
-    " This is not effective
-    "elseif c_mode ==? "r"
-    "    let statusstring = '%#DiffAdd#'
-    "    let statusstring .= ' REPLACE '
+    elseif c_mode ==? "r"
+        let statusstring = '%#DiffAdd#'
+        let statusstring .= ' REPLACE '
     elseif c_mode ==? "c"
         let statusstring = '%#DiffChange#'
         let statusstring .= ' COMMAND '
@@ -108,7 +106,7 @@ cmap w!! w !sudo tee %
 " Color settings
 colorscheme gruvbox
 set background=dark
-hi ColorColumn guibg=#353535 ctermbg=246
+hi ColorColumn guibg=#383838 ctermbg=246
 
 
 " Disables automatic commenting on newline:
@@ -123,4 +121,4 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 "            \'.markdown': 'markdown',
 "            \'.mdown': 'markdown'
 "            \}
-autocmd BufRead, BufNewFile *.tex set filetype=tex
+autocmd BufRead, BufNewFile *.tex,*.cls set filetype=tex
