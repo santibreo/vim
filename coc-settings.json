@@ -10,10 +10,10 @@
         "json"
     ],
     // diagnosis
-    "diagnostic.errorSign": "xx",
-    "diagnostic.warningSign": "!!",
-    "diagnostic.infoSign": ">>",
-    "diagnostic.hintSign": "--",
+    "diagnostic.errorSign": "🚫",
+    "diagnostic.warningSign": "🚩",
+    "diagnostic.infoSign": "‼️",
+    "diagnostic.hintSign": "🛸",
     // suggestions
     "suggest.minTriggerInputLength": 2,
     "suggest.snippetIndicator": "[+]",

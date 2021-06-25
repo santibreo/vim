@@ -46,8 +46,12 @@ source $VIMHOME\settings\keymappings.vim
 
 " Python and Node hosts
 let g:loaded_python_provider = 0
-let g:python3_host_prog = expand("$LOCALAPPDATA\\Programs\\Python\\Python39\\python.exe")
-let g:node_host_prog = expand("$LOCALAPPDATA\\Programs\\node-v14.16.0-win-x64\\node_modules\\neovim\\bin\\cli.js")
+if has('win32')
+    let g:python3_host_prog = expand("$LOCALAPPDATA\\Programs\\Python\\Python39\\python.exe")
+    let g:node_host_prog = expand("$LOCALAPPDATA\\Programs\\node-v14.16.0-win-x64\\node_modules\\neovim\\bin\\cli.js")
+else
+    "Put linux version here
+endif
 
 " CONFIGURATIONS
 " netree
