@@ -1,5 +1,3 @@
-" TODO Make win - lin compatible
-
 " Plugins
 call plug#begin("$VIMHOME/plugged")
     " Better vim
@@ -33,6 +31,7 @@ call plug#begin("$VIMHOME/plugged")
     "Plug 'vim-pandoc/vim-rmarkdown'
     " Fuzzy file search
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+    Plug 'junegunn/fzf.vim'
     " Rip grep for faster searchs
     Plug 'jremmen/vim-ripgrep'
     " REPL
@@ -40,20 +39,33 @@ call plug#begin("$VIMHOME/plugged")
 call plug#end()
 
 
-" GENERAL SETTINGS
-source $VIMHOME\settings\general.vim
-source $VIMHOME\settings\keymappings.vim
+" TODO Make win - lin compatible
+" PATHS AND HOSTS
+function OSDependentPathJoiner(...)
+    let itemsAsStr = join(a:000, "', r'")
+    let pyCmd = "print(join(r'" . itemsAsStr . "'), end='');"
+    return  system('python -c "from os.path import join;' . pyCmd . '"')
+endfunction
 
-" Python and Node hosts
-let g:loaded_python_provider = 0
+let g:python3_glo_location = system('python -c "from pymines.pyinfo import get_glo_lib_location; get_glo_lib_location();"')
+let g:python3_env_location = system('python -c "from pymines.pyinfo import get_env_lib_location; get_env_lib_location();"')
+if g:python3_glo_location ==# g:python3_env_location
+    let g:python3_host_prog = OSDependentPathJoiner(python3_glo_location, 'python.exe')
+else
+    let g:python3_host_prog = OSDependentPathJoiner(python3_env_location, 'Scripts', 'python.exe')
+endif
+
 if has('win32')
-    let g:python3_host_prog = expand("$LOCALAPPDATA\\Programs\\Python\\Python39\\python.exe")
     let g:node_host_prog = expand("$LOCALAPPDATA\\Programs\\node-v14.16.0-win-x64\\node_modules\\neovim\\bin\\cli.js")
 else
     "Put linux version here
 endif
 
 " CONFIGURATIONS
+" General settings
+source $VIMHOME/settings/general.vim
+source $VIMHOME/settings/keymappings.vim
+
 " netree
 let g:netrw_liststyle=3 " tree view type
 let g:netrw_banner=1 " 0 to don't show a (not so) useless banner
@@ -66,16 +78,16 @@ nnoremap <C-p> :FZF<CR>
 " vim-markdown
 let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'r', 'css']
 " Coc
-source $VIMHOME\settings\coc.vim
-source $VIMHOME\settings\coc-vimtex.vim
-source $VIMHOME\settings\coc-snippets.vim
+source $VIMHOME/settings/coc.vim
+source $VIMHOME/settings/coc-vimtex.vim
+source $VIMHOME\settings/coc-snippets.vim
 " Snippets
 "source $USERPROFILE\AppData\Local\nvim\settings\snippets.vim
 "source $USERPROFILE\AppData\Local\nvim\settings\ultisnips.vim
 " Fugitive
-source $VIMHOME\settings\fugitive.vim
+source $VIMHOME/settings/fugitive.vim
 " REPL
-source $VIMHOME\settings\repl.vim
+source $VIMHOME/settings/repl.vim
 
 
 " AUTOCOMMANDS

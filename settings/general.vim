@@ -1,5 +1,4 @@
 " Settings
-
 " + BASICS
 set nocompatible                    " Avoid VI backward compatibility
 set encoding=utf-8
@@ -83,7 +82,7 @@ function! ModeStatusline()
     let statusstring.="\ %r"
     let statusstring.="\ %y"
     let statusstring.="%#CursorColumn#"
-    let statusstring.="\ %-015.20F"
+    let statusstring.="\ %-015.50F"
     let statusstring.="%="                  " Right side settings
     let statusstring.="%#DiffChange#"
     let statusstring.="\ %c:%l/%L\ "
@@ -106,19 +105,11 @@ cmap w!! w !sudo tee %
 " Color settings
 colorscheme gruvbox
 set background=dark
-hi ColorColumn guibg=#383838 ctermbg=246
+hi ColorColumn guibg=#361e1c ctermbg=246
 
 
 " Disables automatic commenting on newline:
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 
-" Ensure files are read as what I want:
-"let g:vimwiki_ext2syntax = {
-"            \'.Rmd': 'markdown',
-"            \'.rmd': 'markdown',
-"            \'.md': 'markdown',
-"            \'.markdown': 'markdown',
-"            \'.mdown': 'markdown'
-"            \}
 autocmd BufRead, BufNewFile *.tex,*.cls set filetype=tex
