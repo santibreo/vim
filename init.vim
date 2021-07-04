@@ -50,8 +50,10 @@ endfunction
 let g:python3_host_prog = system("python -c 'import os; print(os.sys.executable, end=\"\");'")
 if has('win32')
     let g:node_host_prog = expand("$LOCALAPPDATA\\Programs\\node-v14.16.0-win-x64\\node_modules\\neovim\\bin\\cli.js")
+    let g:python_scripts_location = expand("$LOCALAPPDATA\\Programs\\Python\\Python39\\Scripts")
 else
-    let g:node_host_prog = expand("/usr/bin/node")
+    let g:python_scripts_location = expand("$HOME/.local/bin")
+    let g:node_host_prog = "/usr/bin/node"
 endif
 
 " CONFIGURATIONS
@@ -74,6 +76,7 @@ let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'r', 'css']
 source $NVIMHOME/settings/coc.vim
 source $NVIMHOME/settings/coc-vimtex.vim
 source $NVIMHOME/settings/coc-snippets.vim
+source $NVIMHOME/settings/coc-config.vim
 " Snippets
 "source $USERPROFILE\AppData\Local\nvim\settings\snippets.vim
 "source $USERPROFILE\AppData\Local\nvim\settings\ultisnips.vim

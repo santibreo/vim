@@ -28,7 +28,7 @@ set splitright                      " Vsplit right instead of left
 set foldenable                      " Enable folding
 set foldmethod=indent               "   - Based on indentation
 set foldlevel=0                     "   - All folds closed up to 1 level
-set undodir=$VIMHOME/undodir        " Where to save the undo files
+set undodir=$NVIMHOME/undodir       " Where to save the undo files
 set undofile                        " Enable undo after file is closed
 " + DEACTIVATIONS
 set noerrorbells                    " Errors should not lead to a color orchestra

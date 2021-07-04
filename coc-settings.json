@@ -23,15 +23,12 @@
     "suggest.enablePreview": true,
     "suggest.maxCompleteItemCount": 15,
     // python config
-    "python.venvPath": "C:/Users/n230104/.virtualenvs",
     "python.formatting.provider": "black",
-    "python.formatting.blackPath": "$LOCALAPPDATA/Programs/Python/Python37/Scripts/black",
     "python.formatting.blackArgs": [
         "-l 80"
     ],
     "python.linting.enabled": true,
     "python.linting.pylintEnabled": true,
-    "python.linting.pylintPath": "$LOCALAPPDATA/Programs/Python/Python37/Scripts/pylint",
     "python.linting.pylintArgs": [
         "--disable=F0401"
     ],
@@ -41,5 +38,5 @@
     "snippets.ultisnips.directories": [
         "ultisnips"
     ],
-    "snippets.userSnippetsDirectory": "$VIMHOME/ultisnips"
+    "snippets.userSnippetsDirectory": "$NVIMHOME/ultisnips"
 }
