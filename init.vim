@@ -1,5 +1,5 @@
 " Plugins
-call plug#begin("$VIMHOME/plugged")
+call plug#begin("$NVIMHOME/plugged")
     " Better vim
     Plug 'tpope/vim-repeat'
     Plug 'tpope/vim-surround'
@@ -46,25 +46,18 @@ function OSDependentPathJoiner(...)
     let pyCmd = "print(join(r'" . itemsAsStr . "'), end='');"
     return  system('python -c "from os.path import join;' . pyCmd . '"')
 endfunction
-
-let g:python3_glo_location = system('python -c "from pymines.pyinfo import get_glo_lib_location; get_glo_lib_location();"')
-let g:python3_env_location = system('python -c "from pymines.pyinfo import get_env_lib_location; get_env_lib_location();"')
-if g:python3_glo_location ==# g:python3_env_location
-    let g:python3_host_prog = OSDependentPathJoiner(python3_glo_location, 'python.exe')
-else
-    let g:python3_host_prog = OSDependentPathJoiner(python3_env_location, 'Scripts', 'python.exe')
-endif
-
+" Hosts
+let g:python3_host_prog = system("python -c 'import os; print(os.sys.executable, end=\"\");'")
 if has('win32')
     let g:node_host_prog = expand("$LOCALAPPDATA\\Programs\\node-v14.16.0-win-x64\\node_modules\\neovim\\bin\\cli.js")
 else
-    "Put linux version here
+    let g:node_host_prog = expand("/usr/bin/node")
 endif
 
 " CONFIGURATIONS
 " General settings
-source $VIMHOME/settings/general.vim
-source $VIMHOME/settings/keymappings.vim
+source $NVIMHOME/settings/general.vim
+source $NVIMHOME/settings/keymappings.vim
 
 " netree
 let g:netrw_liststyle=3 " tree view type
@@ -78,16 +71,16 @@ nnoremap <C-p> :FZF<CR>
 " vim-markdown
 let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'r', 'css']
 " Coc
-source $VIMHOME/settings/coc.vim
-source $VIMHOME/settings/coc-vimtex.vim
-source $VIMHOME\settings/coc-snippets.vim
+source $NVIMHOME/settings/coc.vim
+source $NVIMHOME/settings/coc-vimtex.vim
+source $NVIMHOME/settings/coc-snippets.vim
 " Snippets
 "source $USERPROFILE\AppData\Local\nvim\settings\snippets.vim
 "source $USERPROFILE\AppData\Local\nvim\settings\ultisnips.vim
 " Fugitive
-source $VIMHOME/settings/fugitive.vim
+source $NVIMHOME/settings/fugitive.vim
 " REPL
-source $VIMHOME/settings/repl.vim
+source $NVIMHOME/settings/repl.vim
 
 
 " AUTOCOMMANDS
