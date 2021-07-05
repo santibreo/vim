@@ -4,8 +4,8 @@
 let mapleader = ","
 
 " Commands
-nnoremap : ;
-nnoremap ; :
+noremap : ;
+noremap ; :
 
 " No arrows for you
 noremap <Up> <Nop>
