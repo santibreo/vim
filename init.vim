@@ -35,7 +35,8 @@ call plug#begin("$NVIMHOME/plugged")
     " Rip grep for faster searchs
     Plug 'jremmen/vim-ripgrep'
     " REPL
-    Plug 'sillybun/vim-repl'
+    Plug 'pappasam/nvim-repl'
+    "Plug 'sillybun/vim-repl'       Not compatible with neovim
 call plug#end()
 
 
