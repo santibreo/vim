@@ -7,16 +7,6 @@ let mapleader = ","
 nnoremap : ;
 nnoremap ; :
 
-" No arrows for you
-noremap <Up> <Nop>
-noremap <Down> <Nop>
-noremap <Left> <Nop>
-noremap <Right> <Nop>
-inoremap <Up> <Nop>
-inoremap <Down> <Nop>
-inoremap <Left> <Nop>
-inoremap <Right> <Nop>
-
 " Save faster
 nmap <C-s> ;wa<CR>
 imap <C-s> <ESC>;wa<CR>a
@@ -57,11 +47,15 @@ vnoremap P "_dP
 " Open NETRW with Q
 noremap Q :Sexplore<CR>
 
-" Use <S-Left> to resize windows
-nnoremap <M-j> :resize -2<CR>
-nnoremap <M-k> :resize +2<CR>
-nnoremap <M-l> :vertical resize -2<CR>
-nnoremap <M-h> :vertical resize +2<CR>
+" Arrow to resize windows <Nop> to ban them
+noremap <Up> :resize -2<CR>
+noremap <Down> :resize +2<CR>
+noremap <Left> :vertical resize -2<CR>
+noremap <Right> :vertical resize +2<CR>
+inoremap <Up> :resize -2<CR>
+inoremap <Down> :resize +2<CR>
+inoremap <Left> :vertical resize -2<CR>
+inoremap <Right> :vertical resize +2<CR>
 
 " Back to normality
 inoremap jk <Esc>
