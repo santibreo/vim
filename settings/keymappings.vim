@@ -4,8 +4,8 @@
 let mapleader = ","
 
 " Commands
-nnoremap : ;
-nnoremap ; :
+noremap : ;
+noremap ; :
 
 " Save faster
 nmap <C-s> ;wa<CR>
