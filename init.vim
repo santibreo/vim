@@ -39,7 +39,6 @@ call plug#begin("$NVIMHOME/plugged")
 call plug#end()
 
 
-" TODO Make win - lin compatible
 " PATHS AND HOSTS
 function OSDependentPathJoiner(...)
     let itemsAsStr = join(a:000, "', r'")
@@ -47,25 +46,26 @@ function OSDependentPathJoiner(...)
     return  system('python -c "from os.path import join;' . pyCmd . '"')
 endfunction
 " Hosts
-let g:python3_host_prog = system("python -c 'import os; print(os.sys.executable, end=\"\");'")
 if has('win32')
     let g:node_host_prog = expand("$LOCALAPPDATA\\Programs\\node-v14.16.0-win-x64\\node_modules\\neovim\\bin\\cli.js")
+    let g:python3_host_prog = expand("$LOCALAPPDATA\\Programs\\Python\\Python39\\python.exe")
     let g:python_scripts_location = expand("$LOCALAPPDATA\\Programs\\Python\\Python39\\Scripts")
 else
-    let g:python_scripts_location = expand("$HOME/.local/bin")
     let g:node_host_prog = "/usr/bin/node"
+    let g:python3_host_prog = "/usr/bin/python"
+    let g:python_scripts_location = expand("$HOME/.local/bin")
 endif
+
 
 " CONFIGURATIONS
 " General settings
 source $NVIMHOME/settings/general.vim
 source $NVIMHOME/settings/keymappings.vim
-
 " netree
 let g:netrw_liststyle=3 " tree view type
 let g:netrw_banner=1 " 0 to don't show a (not so) useless banner
 " emmet
-let g:user_emmet_leader_key=',' " Avoid conflicts with user
+let g:user_emmet_leader_key='\' " Avoid conflicts with user
 let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
 " FZF

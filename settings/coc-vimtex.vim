@@ -16,9 +16,9 @@ let g:vimtex_compiler_latexmk_engines = {
     \}
 
 " Compiler options
-let g:vimtex_compiler_latexmk = { 
+let g:vimtex_compiler_latexmk = {
         \ 'executable' : 'latexmk',
-        \ 'options' : [ 
+        \ 'options' : [
         \   '-file-line-error',
         \   '-synctex=-1',
         \   '-interaction=nonstopmode',
@@ -27,7 +27,12 @@ let g:vimtex_compiler_latexmk = {
         \}
 
 " Settings for SumatraPDF
-let g:vimtex_view_general_viewer = 'SumatraPDF'
+if has('win32')
+    let g:vimtex_view_general_viewer = 'SumatraPDF'
+else
+    let g:vimtex_view_general_viewer = 'Zathura'
+endif
+
 " let g:vimtex_view_general_options = '-reuse-instance'
 " let g:vimtex_view_general_options
 "     \ = ' -forward-search @tex @line'
