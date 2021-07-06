@@ -1,4 +1,5 @@
-" Manage merge conflicts
-nmap <leader>gs :G<CR>
-nmap <leader>gh :diffget //3<CR>
-nmap <leader>gf :diffget //2<CR>
+" Mappings (gg stands for Git mnemonic)
+nmap <leader>ggs ;G<CR>
+nmap <leader>ggc ;Git commit<CR>
+nmap <leader>gggh ;diffget //3<CR>
+nmap <leader>gggf ;diffget //2<CR>
