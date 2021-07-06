@@ -1,1 +1,1 @@
-source $VIMHOME\after\ftplugin\gendocs.vim
+source $NVIMHOME\after\ftplugin\gendocs.vim

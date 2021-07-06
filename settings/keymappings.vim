@@ -52,10 +52,10 @@ noremap <Up> :resize -2<CR>
 noremap <Down> :resize +2<CR>
 noremap <Left> :vertical resize -2<CR>
 noremap <Right> :vertical resize +2<CR>
-inoremap <Up> :resize -2<CR>
-inoremap <Down> :resize +2<CR>
-inoremap <Left> :vertical resize -2<CR>
-inoremap <Right> :vertical resize +2<CR>
+inoremap <Up> <ESC>:resize -2<CR>A
+inoremap <Down> <ESC>:resize +2<CR>A
+inoremap <Left> <ESC>:vertical resize -2<CR>A
+inoremap <Right> <ESC>:vertical resize +2<CR>A
 
 " Back to normality
 inoremap jk <Esc>

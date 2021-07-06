@@ -8,7 +8,7 @@ setlocal foldexpr=vimtex#fold#level(v:lnum)
 setlocal foldtext=vimtex#fold#text()
 
 " Config of documentation filetypes
-source $VIMHOME\after\ftplugin\gendocs.vim
+source $NVIMHOME\after\ftplugin\gendocs.vim
 
 if !exists("g:tex_command")
     let g:tex_command = "xelatex"
